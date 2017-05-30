@@ -7,7 +7,7 @@
         <ul class="s_list_1 clearfix">
           <li><a href="index.php">Home</a></li>
           <li><a href="login.php">Log In</a></li>
-          <li><a href="cart.html">Shopping Cart</a></li>
+          <li><a href="cart.php">Shopping Cart</a></li>
           <li><a href="static.html">About Us</a></li>
           <li><a href="contacts.html">Contact</a></li>
         </ul>
