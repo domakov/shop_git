@@ -43,25 +43,25 @@
       
       <div id="categories" class="s_nav">
         <ul>
-          <li id="menu_home"> <a href="index.php">Home</a> </li>
-          <li> <a href="listing_1.php">Electronics</a>
+          <li id="menu_home"> <a href="index.php">Басты бет</a> </li>
+          <li> <a href="listing_1.php">Электроника</a>
             <div class="s_submenu">
-              <h3>Inside Electronics</h3>
+              <h3>электроника ішінде</h3>
               <ul class="s_list_1 clearfix">
-                <li> <a href="listing_1.php">Digital Cameras</a>
+                <li> <a href="listing_1.php">сандық фотоаппарат</a>
                   <ul class="s_list_1 clearfix">
-                    <li><a href="listing_1.php">Compact Cameras</a></li>
-                    <li><a href="listing_1.php">Digital SLR</a></li>
+                    <li><a href="listing_1.php">Шағын камералар</a></li>
+                    <li><a href="listing_1.php">сандық айналы</a></li>
                   </ul>
                 </li>
-                <li><a href="listing_1.php">Home Audio</a></li>
-                <li><a href="listing_1.php">Home Cinema</a></li>
-                <li><a href="listing_1.php">Cell Phones</a></li>
-                <li><a href="listing_1.php">MP3 Players</a></li>
-                <li><a href="listing_1.php">Car-Audio</a></li>
+                <li><a href="listing_1.php">Басты бет аудио</a></li>
+                <li><a href="listing_1.php">Үй кинотеатры</a></li>
+                <li><a href="listing_1.php">Ұялы телефондар</a></li>
+                <li><a href="listing_1.php">MP3 Ойыншылар</a></li>
+                <li><a href="listing_1.php">Аудио</a></li>
               </ul>
               <span class="clear border_eee"></span>
-              <h3>Electronics Brands</h3>
+              <h3>Электроника  брендтер</h3>
               <ul class="s_list_1 clearfix">
                 <li><a href="listing_1.php">Canon</a></li>
                 <li><a href="listing_1.php">Hugo Boss</a></li>
@@ -71,27 +71,27 @@
               </ul>
             </div>
           </li>
-          <li> <a href="listing_1.php">Computers</a>
+          <li> <a href="listing_1.php">Компьютерлер</a>
             <div class="s_submenu">
               <h3>Inside Computers</h3>
               <ul class="s_list_1 clearfix">
-                <li><a href="listing_1.php">Desktops</a></li>
-                <li><a href="listing_1.php">Laptops</a></li>
-                <li><a href="listing_1.php">Monitors</a></li>
-                <li><a href="listing_1.php">Components</a></li>
-                <li><a href="listing_1.php">Software</a></li>
+                <li><a href="listing_1.php">Үстелдік компьютерлер</a></li>
+                <li><a href="listing_1.php">ноутбуктер</a></li>
+                <li><a href="listing_1.php">Мониторлар</a></li>
+                <li><a href="listing_1.php">компоненттері</a></li>
+                <li><a href="listing_1.php">Бағдарламалық қамтамасыз ету</a></li>
               </ul>
               <span class="clear border_eee"></span>
-              <h3>Computers Brands</h3>
+              <h3>Компьютерлік брендтер</h3>
               <ul class="s_list_1 clearfix">
                 <li><a href="listing_1.php">Hugo Boss</a></li>
                 <li><a href="listing_1.php">Sony</a></li>
               </ul>
             </div>
           </li>
-          <li><a href="listing_1.php">Clothing</a>
+          <li><a href="listing_1.php">киім</a>
             <div class="s_submenu">
-              <h3>Inside Clothing</h3>
+              <h3>Киім</h3>
               <ul class="s_list_1 clearfix">
                 <li><a href="listing_1.php">Women's Clothing</a></li>
                 <li><a href="listing_1.php">Men's Clothing</a></li>
@@ -100,14 +100,14 @@
                 <li><a href="listing_1.php">Infants and toddlers</a></li>
               </ul>
               <span class="clear border_eee"></span>
-              <h3>Clothing Brands</h3>
+              <h3>Киім брендтер</h3>
               <ul class="s_list_1 clearfix">
                 <li><a href="listing_1.php">Bvlgari</a></li>
                 <li><a href="listing_1.php">Elisabeth Arden</a></li>
               </ul>
             </div>
           </li>
-          <li><a href="listing_1.php">Shoes</a>
+          <li><a href="listing_1.php">Аяқ киім</a>
             <div class="s_submenu">
               <h3>Inside Shoes</h3>
               <ul class="s_list_1 clearfix">
@@ -208,7 +208,7 @@
       </div>
       
       <div id="cart_menu" class="s_nav">
-      	<a href="cart.php"><span class="s_icon"></span> <small class="s_text">Cart</small><span class="s_grand_total s_main_color">$0.00</span></a>
+      	<a href="cart.php"><span class="s_icon"></span> <small class="s_text">Кәрзеңке</small><span class="s_grand_total s_main_color">$0.00</span></a>
         <div class="s_submenu s_cart_holder">
           <p class="s_mb_0">0 items</p>
         </div>

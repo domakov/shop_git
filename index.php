@@ -48,7 +48,7 @@ include_once("includes/header.php");
             <div class="s_rating_holder">
               <p class="s_rating s_rating_big s_rating_5"> <span style="width: 60%;" class="s_percent"></span> </p>
               <span class="s_average">3 out of 5</span> </div>
-            <p class="s_desc"> Imagine the advantages of going big without slowing down. The big 19&quot; 941BW monitor combines wide aspect ratio with fast pixel response time, for bigger images, more room to work and crisp motion. In addition, the exclusive MagicBright 2, MagicColor and MagicTune technologies help deliver th...</p>
+            <p class="s_desc"> баяулауы жоқ үлкен бара артықшылықтарын елестетіп көріңізші. үлкен 19 & дегенді түртіңіз 941BW монитор үлкен суреттер, жұмыс көп бөлмеде және қытырлақ қозғалыс үшін, тез пикселді жауап қайтару уақыт кең арақатынасын біріктіреді. Сонымен қатар, эксклюзивті MagicBright 2, MagicColor және MagicTune технологиялар мың жеткізуге көмектеседі...</p>
             <div class="s_price_holder">
               <p class="s_price"> <span class="s_currency s_before">$</span>384.67 </p>
             </div>
@@ -111,7 +111,10 @@ include_once("includes/header.php");
     <div class="clear"></div>
     
     <div id="special_home" class="grid_12">
-      <h2 class="s_title_1"><span class="s_main_color">Specials</span> Products</h2>
+      <h2 class="s_title_1"><span class="s_main_color">Жеңілдіктер
+</span> өнімдерге
+
+</h2>
       <div class="clear"></div>
       <div class="s_listing s_grid_view clearfix">
         <div class="s_item grid_2"> <a class="s_thumb" href="product.php"><img src="images/dummy/pic_5.jpg" title="Armani Acqua di Gioia" alt="Armani Acqua di Gioia" /></a>
@@ -180,7 +183,7 @@ include_once("includes/header.php");
     </div>
     
     <div id="latest_home" class="grid_12">
-      <h2 class="s_title_1"><span class="s_main_color">Latest</span> Products</h2>
+      <h2 class="s_title_1"><span class="s_main_color">Соңғы </span> өнімдері</h2>
       <div class="clear"></div>
       <div class="s_listing s_grid_view clearfix">
         <div class="s_item grid_2"> <a class="s_thumb" href="product.php"><img src="images/dummy/pic_9.jpg" title="Sony Cyber Shot S1000" alt="Sony Cyber Shot S1000" /></a>
