@@ -73,5 +73,5 @@
       <img src="images/payments/visa_straight_32px.png" alt="" />
       <img src="images/payments/american_express_straight_32px.png" alt="" />
     </div>
-    <p id="copy">&copy; Copyright 2011. Powered by <a class="blue" href="">Open Cart</a>.<br /> <a class="s_main_color" href="http://www.shoppica.net">Shoppica theme</a> made by <a href="http://www.themeburn.com">ThemeBurn.com</a></p>
+    <p id="copy">&copy; Copyright <?=date('Y')?>. Powered by <a class="blue" href="">APK 301IS</a>.<br /> <a class="s_main_color" href="#">Shoppica theme</a> made by <a href="">301 is</a></p>
   </div>
