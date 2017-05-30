@@ -144,19 +144,19 @@ include_once("includes/header.php");
       <div id="featured_side" class="s_box clearfix">
         <h2>Featured</h2>
         <div class="s_item s_size_1 clearfix">
-          <a class="s_thumb" href="product.html"><img src="images/dummy/pic_8.jpg" width="38" height="38" alt="White football trainers" /></a>
-          <h3><a href="product.html">White football trainers</a></h3>
-          <p><a href="product.html"><span class="s_main_color"><span class="s_currency s_before">£</span>117.50</span></a></p>
+          <a class="s_thumb" href="product.php"><img src="images/dummy/pic_8.jpg" width="38" height="38" alt="White football trainers" /></a>
+          <h3><a href="product.php">White football trainers</a></h3>
+          <p><a href="product.php"><span class="s_main_color"><span class="s_currency s_before">£</span>117.50</span></a></p>
         </div>
         <div class="s_item s_size_1 clearfix">
-          <a class="s_thumb" href="product.html"><img src="images/dummy/pic_7.jpg" width="38" height="38" alt="Hubo Boss Emotion" /></a>
-          <h3><a href="product.html">Hubo Boss Emotion</a></h3>
-          <p><a href="product.html"><span class="s_main_color"><span class="s_currency s_before">£</span>2,350.00</span></a></p>
+          <a class="s_thumb" href="product.php"><img src="images/dummy/pic_7.jpg" width="38" height="38" alt="Hubo Boss Emotion" /></a>
+          <h3><a href="product.php">Hubo Boss Emotion</a></h3>
+          <p><a href="product.php"><span class="s_main_color"><span class="s_currency s_before">£</span>2,350.00</span></a></p>
         </div>
         <div class="s_item s_size_1 clearfix">
-          <a class="s_thumb" href="product.html"><img src="images/dummy/pic_6.jpg" width="38" height="38" alt="Christian Dior J'adore" /></a>
-          <h3><a href="product.html">Christian Dior J'adore</a></h3>
-          <p><a href="product.html"><span class="s_main_color"><span class="s_currency s_before">£</span>328.99</span></a></p>
+          <a class="s_thumb" href="product.php"><img src="images/dummy/pic_6.jpg" width="38" height="38" alt="Christian Dior J'adore" /></a>
+          <h3><a href="product.php">Christian Dior J'adore</a></h3>
+          <p><a href="product.php"><span class="s_main_color"><span class="s_currency s_before">£</span>328.99</span></a></p>
         </div>
       </div>
 

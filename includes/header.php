@@ -1,7 +1,7 @@
   <div id="header" class="container_12">
     <div class="grid_12">
     
-    	<a id="site_logo" href="index.html">Shoppica store - Premium e-Commerce Theme</a> 
+    	<a id="site_logo" href="index.php">Shoppica store - Premium e-Commerce Theme</a> 
 
       <div id="system_navigation" class="s_nav">
         <ul class="s_list_1 clearfix">
@@ -43,7 +43,7 @@
       
       <div id="categories" class="s_nav">
         <ul>
-          <li id="menu_home"> <a href="index.html">Home</a> </li>
+          <li id="menu_home"> <a href="index.php">Home</a> </li>
           <li> <a href="listing_1.php">Electronics</a>
             <div class="s_submenu">
               <h3>Inside Electronics</h3>

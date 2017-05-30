@@ -71,8 +71,8 @@ include_once("includes/header.php");
           </tr>
           <tr class="even">
             <td valign="middle"><input type="checkbox" /></td>
-            <td valign="middle"><a href="product.html"><img src="images/dummy/pic_1.jpg" width="60" height="60" alt="Panasonic Lumix" /></a></td>
-            <td valign="middle"><a href="product.html"><strong>Panasonic Lumix</strong></a></td>
+            <td valign="middle"><a href="product.php"><img src="images/dummy/pic_1.jpg" width="60" height="60" alt="Panasonic Lumix" /></a></td>
+            <td valign="middle"><a href="product.php"><strong>Panasonic Lumix</strong></a></td>
             <td valign="middle">Product 4</td>
             <td valign="middle"><input type="text" size="3" /></td>
             <td valign="middle">94.00<span class="s_currency s_after"> eur</span></td>
@@ -80,8 +80,8 @@ include_once("includes/header.php");
           </tr>
           <tr class="odd">
             <td valign="middle"><input type="checkbox" /></td>
-            <td valign="middle"><a href="product.html"><img src="images/dummy/pic_2.jpg" width="60" height="60" alt="Armani Acqua di Gioia" /></a></td>
-            <td valign="middle"><a href="product.html"><strong>Armani Acqua di Gioia</strong></a></td>
+            <td valign="middle"><a href="product.php"><img src="images/dummy/pic_2.jpg" width="60" height="60" alt="Armani Acqua di Gioia" /></a></td>
+            <td valign="middle"><a href="product.php"><strong>Armani Acqua di Gioia</strong></a></td>
             <td valign="middle">Product 4</td>
             <td valign="middle"><input type="text" size="3" /></td>
             <td valign="middle">822.50<span class="s_currency s_after"> eur</span></td>
@@ -89,8 +89,8 @@ include_once("includes/header.php");
           </tr>
           <tr class="even">
             <td valign="middle"><input type="checkbox" /></td>
-            <td valign="middle"><a href="product.html"><img src="images/dummy/pic_3.jpg" width="60" height="60" alt="Jameson Whiskey Special Reserve 12 yers" /></a></td>
-            <td valign="middle"><a href="product.html"><strong>Jameson Whiskey Special Reserve 12 yers</strong></a></td>
+            <td valign="middle"><a href="product.php"><img src="images/dummy/pic_3.jpg" width="60" height="60" alt="Jameson Whiskey Special Reserve 12 yers" /></a></td>
+            <td valign="middle"><a href="product.php"><strong>Jameson Whiskey Special Reserve 12 yers</strong></a></td>
             <td valign="middle">Product 8</td>
             <td valign="middle"><input type="text" size="3" /></td>
             <td valign="middle">117.50<span class="s_currency s_after"> eur</span></td>
