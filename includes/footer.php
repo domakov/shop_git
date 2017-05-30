@@ -1,65 +1,65 @@
  <div id="footer" class="container_12">
     <div id="footer_categories" class="clearfix">
       <div class="grid_2">
-        <h2>Electronics</h2>
+        <h2>Электрондар</h2>
         <ul class="s_list_1">
-          <li><a href="">Digital Cameras</a></li>
-          <li><a href="">Home Audio</a></li>
-          <li><a href="">Home Cinema</a></li>
-          <li><a href="">Cell Phones</a></li>
-          <li><a href="">MP3 Players</a></li>
-          <li><a href="">Car-Audio</a></li>
+          <li><a href="">Камера</a></li>
+          <li><a href="">Аудио</a></li>
+          <li><a href="">Кинотеатр</a></li>
+          <li><a href="">Ұялы телефондар</a></li>
+          <li><a href="">MP3</a></li>
+          <li><a href="">Автокөлік аудиосы</a></li>
         </ul>
       </div>
       <div class="grid_2">
-        <h2>Computers</h2>
+        <h2>Компьютерлер</h2>
         <ul class="s_list_1">
-          <li><a href="">Desktops</a></li>
-          <li><a href="">Laptops</a></li>
-          <li><a href="">Monitors</a></li>
-          <li><a href="">Components</a></li>
-          <li><a href="">Software</a></li>
+          <li><a href="">Дербес Компьютерлер</a></li>
+          <li><a href="">Ноутбуктер</a></li>
+          <li><a href="">Мониторлар</a></li>
+          <li><a href="">Компоненттері</a></li>
+          <li><a href="">Бағдарламалар</a></li>
         </ul>
       </div>
       <div class="grid_2">
-        <h2>Clothing</h2>
+        <h2>Киімдер</h2>
         <ul class="s_list_1">
-          <li><a href="">Women's Clothing</a></li>
-          <li><a href="">Men's Clothing</a></li>
-          <li><a href="">Boys</a></li>
-          <li><a href="">Girls</a></li>
-          <li><a href="">Infants and toddlers</a></li>
+          <li><a href="">Әйелдер Киімі</a></li>
+          <li><a href="">Ерлер Киімі</a></li>
+          <li><a href="">Ұлдар</a></li>
+          <li><a href="">Қыздар</a></li>
+          <li><a href="">Балалар және Нәрестелер</a></li>
         </ul>
       </div>
       <div class="grid_2">
-        <h2>Shoes</h2>
+        <h2>Аяқ киімдер</h2>
         <ul class="s_list_1">
-          <li><a href="">Women's Shoes</a></li>
-          <li><a href="">Men's Shoes</a></li>
-          <li><a href="">Kids' Shoes</a></li>
-          <li><a href="">Sportswear</a></li>
+          <li><a href="">Әйелдер Аяқ киімі</a></li>
+          <li><a href="">Ерлер Аяқ киімі</a></li>
+          <li><a href="">Балалар Аяқ киімі</a></li>
+          <li><a href="">Спорттық Аяқ киімі</a></li>
         </ul>
       </div>
       <div class="grid_2">
-        <h2>Gifts</h2>
+        <h2>Сыйлықтар</h2>
         <ul class="s_list_1">
-          <li><a href="">Perfumes</a></li>
-          <li><a href="">Spirits and Beers</a></li>
-          <li><a href="">Wines</a></li>
-          <li><a href="">Flowers</a></li>
-          <li><a href="">Chocolates and sweets</a></li>
-          <li><a href="">Toys and Games</a></li>
+          <li><a href="">Парфюмериялар</a></li>
+          <li><a href="">Әтірлер</a></li>
+          <li><a href="">Вино</a></li>
+          <li><a href="">Гүлдер</a></li>
+          <li><a href="">Шоколад және тәттілер</a></li>
+          <li><a href="">Ойындар мен ойыншықтар</a></li>
         </ul>
       </div>
       <div class="grid_2">
-        <h2>At home</h2>
+        <h2>Үй жиһаздары</h2>
         <ul class="s_list_1">
-          <li><a href="">Furniture</a></li>
-          <li><a href="">Garden</a></li>
-          <li><a href="">Appliances</a></li>
-          <li><a href="">Pet Supplies</a></li>
-          <li><a href="">Tools and Accessories</a></li>
-          <li><a href="">Lighting</a></li>
+          <li><a href="">Жиһаз</a></li>
+          <li><a href="">Бақ</a></li>
+          <li><a href="">Техникалық</a></li>
+          <li><a href="">ЗОО товарлары</a></li>
+          <li><a href="">Құрал-саймандар</a></li>
+          <li><a href="">Жарықтандырғыштар</a></li>
         </ul>
       </div>
       <div class="clear"></div>
