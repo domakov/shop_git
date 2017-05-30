@@ -1,7 +1,7 @@
   <div id="header" class="container_12">
     <div class="grid_12">
     
-    	<a id="site_logo" href="index.html">Shoppica store - Premium e-Commerce Theme</a> 
+    	<a id="site_logo" href="index.php">Shoppica store - Premium e-Commerce Theme</a> 
 
       <div id="system_navigation" class="s_nav">
         <ul class="s_list_1 clearfix">
@@ -26,11 +26,12 @@
         </div>
       </div>
       
-      <div id="language_switcher" class="s_switcher"> <span class="s_selected">Доллар США</span>
+      <div id="language_switcher" class="s_switcher"> 
+	  <span class="s_selected">Доллар</span>
         <ul class="s_options">
+          <li><a href="">Теңге</a></li>
           <li><a href="">Евро</a></li>
-          <li><a href="">Фунт стерлингов</a></li>
-          <li><a href="">Доллар США</a></li>
+          <li><a href="">Доллар</a></li>
         </ul>
       </div>
       
