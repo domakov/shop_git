@@ -87,7 +87,7 @@ include_once("includes/header.php");
         </div>
         <div id="view_mode" class="s_nav">
           <ul class="clearfix">
-            <li id="view_grid"><a href="listing_2.html"><span class="s_icon"></span>Grid</a></li>
+            <li id="view_grid"><a href="listing_2.php"><span class="s_icon"></span>Grid</a></li>
             <li id="view_list" class="s_selected"><a href="listing_1.html"><span class="s_icon"></span>List</a></li>
           </ul>
         </div>
