@@ -21,11 +21,11 @@
         <div id="search_bar" class="clearfix">
           <input type="text" id="filter_keyword" />
           <select id="filter_category_id">
-            <option value="0">все категории</option>
-            <option value="1">Category 1</option>
-            <option value="2">Category 2</option>
+            <option value="0">Барлық санаттар</option>
+            <option value="1">Санат 1</option>
+            <option value="2">Санат 2</option>
           </select>
-          <a class="s_button_1 s_secondary_color_bgr"><span class="s_text">Go</span></a> <a class="s_advanced s_main_color" href="">Расширенный поиск</a>
+          <a class="s_button_1 s_secondary_color_bgr"><span class="s_text">Go</span></a> <a class="s_advanced s_main_color" href="">Кеңейтілген іздеу</a>
         </div>
       </div>
       
@@ -38,7 +38,7 @@
         </ul>
       </div>
       
-      <div id="currency_switcher" class="s_switcher"> <span class="s_selected"><img src="images/flags/gb.png" alt="English" /> English</span>
+      <div id="currency_switcher" class="s_switcher"> <span class="s_selected"><img src="images/flags/gb.png" alt="English" /> английский</span>
         <ul class="s_options">
           <li><a href=""><img src="images/flags/gb.png" alt="English" /> английский</a></li>
           <li><a href=""><img src="images/flags/de.png" alt="Deutsch" /> немецкий</a></li>
@@ -93,15 +93,15 @@
               </ul>
             </div>
           </li>
-          <li><a href="listing_1.php">киім</a>
+          <li><a href="listing_1.php">Киім</a>
             <div class="s_submenu">
               <h3>Киім</h3>
               <ul class="s_list_1 clearfix">
-                <li><a href="listing_1.php">Women's Clothing</a></li>
-                <li><a href="listing_1.php">Men's Clothing</a></li>
-                <li><a href="listing_1.php">Boys</a></li>
-                <li><a href="listing_1.php">Girls</a></li>
-                <li><a href="listing_1.php">Infants and toddlers</a></li>
+                <li><a href="listing_1.php">Әйелдер киімі</a></li>
+                <li><a href="listing_1.php">Ерлер киімі</a></li>
+                <li><a href="listing_1.php">Ұл балалалр</a></li>
+                <li><a href="listing_1.php">Қыз балалар</a></li>
+                <li><a href="listing_1.php">Нәрестелер</a></li>
               </ul>
               <span class="clear border_eee"></span>
               <h3>Киім брендтер</h3>
