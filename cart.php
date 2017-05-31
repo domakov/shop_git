@@ -41,10 +41,10 @@ include_once("includes/header.php");
     <div id="intro_wrap">
       <div class="container_12">
         <div id="breadcrumbs" class="grid_12">
-          <a href="index.html">Home</a>
-           &gt; <a href="cart.html">Basket</a>
+          <a href="index.html">Басты бет</a>
+           &gt; <a href="cart.html">Кәрзеңке</a>
         </div>
-        <h1>Shopping Cart (0.00kg)</h1>
+        <h1>Шоппинг арбашасы(0.00kg)</h1>
       </div>
     </div>
   </div>
@@ -61,53 +61,53 @@ include_once("includes/header.php");
       <form id="cart" class="clearfix" action="checkout.html">
         <table class="s_table_1" width="100%" cellpadding="0" cellspacing="0" border="0">
           <tr>
-            <th width="65">Remove</th>
-            <th width="60">Image</th>
-            <th width="320">Name</th>
-            <th>Model</th>
-            <th>Quantity</th>
-            <th>Unit Price</th>
-            <th>Total</th>
+            <th width="65">Кетіру</th>
+            <th width="60">Бейне</th>
+            <th width="320">Атауы</th>
+            <th>Модель</th>
+            <th>Сан</th>
+            <th>Тауар өлшемінің бағасы</th>
+            <th>Жалпылама</th>
           </tr>
           <tr class="even">
             <td valign="middle"><input type="checkbox" /></td>
             <td valign="middle"><a href="product.php"><img src="images/dummy/pic_1.jpg" width="60" height="60" alt="Panasonic Lumix" /></a></td>
             <td valign="middle"><a href="product.php"><strong>Panasonic Lumix</strong></a></td>
-            <td valign="middle">Product 4</td>
+            <td valign="middle">Өнім 4</td>
             <td valign="middle"><input type="text" size="3" /></td>
-            <td valign="middle">94.00<span class="s_currency s_after"> eur</span></td>
-            <td valign="middle">94.00<span class="s_currency s_after"> eur</span></td>
+            <td valign="middle">94.00<span class="s_currency s_after"> KZT</span></td>
+            <td valign="middle">94.00<span class="s_currency s_after"> KZT</span></td>
           </tr>
           <tr class="odd">
             <td valign="middle"><input type="checkbox" /></td>
             <td valign="middle"><a href="product.php"><img src="images/dummy/pic_2.jpg" width="60" height="60" alt="Armani Acqua di Gioia" /></a></td>
             <td valign="middle"><a href="product.php"><strong>Armani Acqua di Gioia</strong></a></td>
-            <td valign="middle">Product 4</td>
+            <td valign="middle">Өнім 4</td>
             <td valign="middle"><input type="text" size="3" /></td>
-            <td valign="middle">822.50<span class="s_currency s_after"> eur</span></td>
-            <td valign="middle">822.50<span class="s_currency s_after"> eur</span></td>
+            <td valign="middle">822.50<span class="s_currency s_after"> KZT</span></td>
+            <td valign="middle">822.50<span class="s_currency s_after"> KZT</span></td>
           </tr>
           <tr class="even">
             <td valign="middle"><input type="checkbox" /></td>
             <td valign="middle"><a href="product.php"><img src="images/dummy/pic_3.jpg" width="60" height="60" alt="Jameson Whiskey Special Reserve 12 yers" /></a></td>
             <td valign="middle"><a href="product.php"><strong>Jameson Whiskey Special Reserve 12 yers</strong></a></td>
-            <td valign="middle">Product 8</td>
+            <td valign="middle">Өнім 4</td>
             <td valign="middle"><input type="text" size="3" /></td>
-            <td valign="middle">117.50<span class="s_currency s_after"> eur</span></td>
-            <td valign="middle">117.50<span class="s_currency s_after"> eur</span></td>
+            <td valign="middle">117.50<span class="s_currency s_after"> KZT</span></td>
+            <td valign="middle">117.50<span class="s_currency s_after"> KZT</span></td>
           </tr>
         </table>
         <br />
-        <p class="s_total"><strong>Sub-Total:</strong> 880.00<span class="s_currency s_after"> eur</span></p>
-        <p class="s_total"><strong>VAT 17.5%:</strong> 154.00<span class="s_currency s_after"> eur</span></p>
-        <p class="s_total s_secondary_color last"><strong>Total:</strong> 1,034.00<span class="s_currency s_after"> eur</span></p>
+        <p class="s_total"><strong>Аралық:</strong> 880.00<span class="s_currency s_after"> KZT</span></p>
+        <p class="s_total"><strong>Қосылған құн салығы 17.5%:</strong> 154.00<span class="s_currency s_after"> KZT</span></p>
+        <p class="s_total s_secondary_color last"><strong>Жалпы:</strong> 1,034.00<span class="s_currency s_after"> KZT</span></p>
                         
         <div class="clear"></div>
         <br />
 
-        <a class="s_button_1 s_ddd_bgr left"><span class="s_text">Continue Shopping</span></a>
-        <button class="s_button_1 s_main_color_bgr" type="submit"><span class="s_text">Checkout</span></button>
-        <a class="s_button_1 s_main_color_bgr"><span class="s_text">Update</span></a>
+        <a class="s_button_1 s_ddd_bgr left"><span class="s_text">Сатып алуды жалғастыру</span></a>
+        <button class="s_button_1 s_main_color_bgr" type="submit"><span class="s_text">Шығу</span></button>
+        <a class="s_button_1 s_main_color_bgr"><span class="s_text">Жаңарту</span></a>
       </form>
 
     </div>
