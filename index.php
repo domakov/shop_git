@@ -137,7 +137,7 @@ $res=fetchAll($sql);
         </div>
         <div class="s_item grid_2"> <a class="s_thumb" href="product.php"><img src="images/dummy/pic_8.jpg" title="Sony VAIO" alt="Sony VAIO" /></a>
           <h3><a href="product.php">Sony VAIO</a></h3>
-          <p class="s_model">Product 19</p>
+          <p class="s_model">Product 9</p>
           <p class="s_price s_promo_price"><span class="s_old_price"><span class="s_currency s_before">$</span>899.99</span><span class="s_currency s_before">$</span>1,731.02</p>
           <p class="s_rating s_rating_5"><span style="width: 100%;" class="s_percent"></span></p>
           <a class="s_button_add_to_cart" href="product.php"><span class="s_icon_16"><span class="s_icon"></span>Add to Cart</span></a>
