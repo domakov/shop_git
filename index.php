@@ -27,14 +27,10 @@
   <!--      H E A D E R       --> 
   <!-- ********************** -->
 <?    
-
-
-include_once("includes/header.php");
-
-
+	include_once("includes/header.php");
 ?>
   <!-- end of header --> 
-  
+ 
 
   <!-- ********************** --> 
   <!--     I N T R O          --> 

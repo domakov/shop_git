@@ -1,3 +1,6 @@
+  <?
+  include_once('functions/db_conn.php');
+  ?>
   <div id="header" class="container_12">
     <div class="grid_12">
     
