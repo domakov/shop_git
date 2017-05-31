@@ -33,7 +33,9 @@
  
 <?
 $sql="SELECT * from tovar 
-INNER JOIN foto ON tovar.id_tovar = foto.id_foto";
+INNER JOIN foto ON tovar.id_tovar = foto.id_tovar
+INNER JOIN category ON tovar.t_category = category.id_category 
+LIMIT 6";
 	$res=fetchAll($sql);
 ?>
   <!-- ********************** --> 
@@ -108,83 +110,39 @@ INNER JOIN foto ON tovar.id_tovar = foto.id_foto";
 
 </h2>
       <div class="clear"></div>
-	  
+	  	
       <div class="s_listing s_grid_view clearfix">
-        <div class="s_item grid_2"> <a class="s_thumb" href="product.php"><img src="images/dummy/pic_5.jpg" title="Armani Acqua di Gioia" alt="Armani Acqua di Gioia" /></a>
-          <h3><a href="product.php">Armani Acqua di Gioia</a></h3>
-          <p class="s_model">Product 4</p>
-          <p class="s_price s_promo_price"><span class="s_old_price"><span class="s_currency s_before">$</span>1,538.69</span><span class="s_currency s_before">$</span>1,346.35</p>
+	  <? 
+		  foreach($res as $array){
+		  if($array["t_sale"]>0){
+		  ?>
+        <div class="s_item grid_2"> <a class="s_thumb" href="product.php"><img src="<?=$array['f_link'];?>" title="Armani Acqua di Gioia" alt="Armani Acqua di Gioia" /></a>
+          <h3><a href="product.php"><?=$array["t_name"];?></a></h3>
+          <p class="s_model"><?=$array["c_name"];?></p>
+          <p class="s_price s_promo_price"><span class="s_old_price"><span class="s_currency s_before">$</span><?=$array['t_price'];?></span><span class="s_currency s_before">$</span>
+		  <?echo ($array["t_price"]-($array["t_price"]*$array["t_sale"]/100))?></p>
           <a class="s_button_add_to_cart" href="product.php"><span class="s_icon_16"><span class="s_icon"></span>Add to Cart</span></a>
         </div>
-        
+        <?}}?>
         <div class="clear"></div>
       </div>
+	  
     </div>
-    
-    <div id="banners_1">
-      <div class="grid_3">
-        <a href="http://themeforest.net/item/shoppica-premium-open-cart-theme/235470?ref=ThemeBurn" target="_blank">
-          <img src="images/dummy/banner_4.jpg">
-        </a>
-      </div>
-      <div class="grid_3">
-        <a href="http://themeforest.net/item/shoppica-premium-open-cart-theme/235470?ref=ThemeBurn" target="_blank">
-          <img src="images/dummy/banner_1.jpg">
-        </a>
-      </div>
-      <div class="grid_3">
-        <a href="http://themeforest.net/item/shoppica-premium-open-cart-theme/235470?ref=ThemeBurn" target="_blank">
-          <img src="images/dummy/banner_2.jpg">
-        </a>
-      </div>
-      <div class="grid_3">
-        <a href="http://themeforest.net/item/shoppica-premium-open-cart-theme/235470?ref=ThemeBurn" target="_blank">
-          <img src="images/dummy/banner_3.jpg">
-        </a>
-      </div>
-      <div class="clear"></div>
-    </div>
+
     
     <div id="latest_home" class="grid_12">
       <h2 class="s_title_1"><span class="s_main_color">Соңғы </span> өнімдері</h2>
       <div class="clear"></div>
       <div class="s_listing s_grid_view clearfix">
-        <div class="s_item grid_2"> <a class="s_thumb" href="product.php"><img src="images/dummy/pic_9.jpg" title="Sony Cyber Shot S1000" alt="Sony Cyber Shot S1000" /></a>
-          <h3><a href="product.php">Sony Cyber Shot S1000</a></h3>
-          <p class="s_model">Product 8</p>
-          <p class="s_price"><span class="s_currency s_before">$</span>192.34</p>
-          <a class="s_button_add_to_cart" href="product.php"><span class="s_icon_16"><span class="s_icon"></span>Add to Cart</span></a>
-        </div>
-        <div class="s_item grid_2"> <a class="s_thumb" href="product.php"><img src="images/dummy/pic_10.jpg" title="Panasonic Lumix" alt="Panasonic Lumix" /></a>
-          <h3><a href="product.php">Panasonic Lumix</a></h3>
-          <p class="s_model">Product 4</p>
-          <p class="s_price"><span class="s_currency s_before">$</span>153.87</p>
-          <a class="s_button_add_to_cart" href="product.php"><span class="s_icon_16"><span class="s_icon"></span>Add to Cart</span></a>
-        </div>
-        <div class="s_item grid_2"> <a class="s_thumb" href="product.php"><img src="images/dummy/pic_1.jpg" title="Samsung P200" alt="Samsung P200" /></a>
-          <h3><a href="product.php">Samsung P200</a></h3>
-          <p class="s_model">Product 6</p>
-          <p class="s_price"><span class="s_currency s_before">$</span>384.67</p>
-          <a class="s_button_add_to_cart" href="product.php"><span class="s_icon_16"><span class="s_icon"></span>Add to Cart</span></a>
-        </div>
-        <div class="s_item grid_2"> <a class="s_thumb" href="product.php"><img src="images/dummy/pic_2.jpg" title="Casio Exilim Zoom" alt="Casio Exilim Zoom" /></a>
-          <h3><a href="product.php">Casio Exilim Zoom</a></h3>
-          <p class="s_model">Product 7</p>
-          <p class="s_price"><span class="s_currency s_before">$</span>192.34</p>
-          <a class="s_button_add_to_cart" href="product.php"><span class="s_icon_16"><span class="s_icon"></span>Add to Cart</span></a>
-        </div>
-        <div class="s_item grid_2"> <a class="s_thumb" href="product.php"><img src="images/dummy/pic_3.jpg" title="Canon Digital Ixus 200 IS" alt="Canon Digital Ixus 200 IS" /></a>
-          <h3><a href="product.php">Canon Digital Ixus 200 IS</a></h3>
-          <p class="s_model">Product 7</p>
-          <p class="s_price"><span class="s_currency s_before">$</span>192.34</p>
-          <a class="s_button_add_to_cart" href="product.php"><span class="s_icon_16"><span class="s_icon"></span>Add to Cart</span></a>
-        </div>
-        <div class="s_item grid_2"> <a class="s_thumb" href="product.php"><img src="images/dummy/pic_4.jpg" title="Hennesy Paradis Extra" alt="Hennesy Paradis Extra" /></a>
-          <h3><a href="product.php">Hennesy Paradis Extra</a></h3>
-          <p class="s_model">Product 19</p>
-          <p class="s_price s_promo_price"><span class="s_old_price"><span class="s_currency s_before">$</span>1,923.36</span><span class="s_currency s_before">$</span>1,731.02</p>
-          <a class="s_button_add_to_cart" href="product.php"><span class="s_icon_16"><span class="s_icon"></span>Add to Cart</span></a>
-        </div>
+	  	<?
+		  foreach($res as $array){?>
+			<div class="s_item grid_2"> <a class="s_thumb" href="product.php"><img src="<?=$array['f_link'];?>" title="Sony Cyber Shot S1000" alt="Sony Cyber Shot S1000" /></a>
+			  <h3><a href="product.php"><?=$array['t_name'];?></a></h3>
+			  <p class="s_model">Product 8</p>
+			  <p class="s_price"><span class="s_currency s_before">$</span><?=$array['t_price'];?></p>
+			  <a class="s_button_add_to_cart" href="product.php"><span class="s_icon_16"><span class="s_icon"></span>Add to Cart</span></a>
+			</div>
+		<?}?>
         <div class="clear"></div>
       </div>
     </div>
