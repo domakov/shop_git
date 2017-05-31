@@ -33,7 +33,7 @@
  
 <?
 $sql="SELECT * from tovar";
-$res=fetchAll($sql);
+	$res=fetchAll($sql);
 ?>
   <!-- ********************** --> 
   <!--     I N T R O          --> 
