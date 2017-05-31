@@ -50,12 +50,12 @@
           <li id="menu_home"> <a href="index.php">Басты бет</a> </li>
           <li> <a href="listing_1.php">Электроника</a>
             <div class="s_submenu">
-              <h3>электроника ішінде</h3>
+              <h3>Электроника ішінде</h3>
               <ul class="s_list_1 clearfix">
-                <li> <a href="listing_1.php">сандық фотоаппарат</a>
+                <li> <a href="listing_1.php">Сандық фотоаппарат</a>
                   <ul class="s_list_1 clearfix">
                     <li><a href="listing_1.php">Шағын камералар</a></li>
-                    <li><a href="listing_1.php">сандық айналы</a></li>
+                    <li><a href="listing_1.php">сандық айналым</a></li>
                   </ul>
                 </li>
                 <li><a href="listing_1.php">Басты бет аудио</a></li>
@@ -113,15 +113,15 @@
           </li>
           <li><a href="listing_1.php">Аяқ киім</a>
             <div class="s_submenu">
-              <h3>Inside Shoes</h3>
+              <h3>Аяқ киім ішінде</h3>
               <ul class="s_list_1 clearfix">
-                <li><a href="listing_1.php">Women's Shoes</a></li>
-                <li><a href="listing_1.php">Men's Shoes</a></li>
-                <li><a href="listing_1.php">Kids' Shoes</a></li>
-                <li><a href="listing_1.php">Sportswear</a></li>
+                <li><a href="listing_1.php">Әйелдер аяқ киімі</a></li>
+                <li><a href="listing_1.php">Ерлер аяқ киімі</a></li>
+                <li><a href="listing_1.php">Балалар аяқ киімі</a></li>
+                <li><a href="listing_1.php">Спорттық аяқ киім</a></li>
               </ul>
               <span class="clear border_eee"></span>
-              <h3>Shoes Brands</h3>
+              <h3>Аяқ киім бренді</h3>
               <ul class="s_list_1 clearfix">
                 <li><a href="listing_1.php">Adidas</a></li>
                 <li><a href="listing_1.php">Apple</a></li>
@@ -134,20 +134,20 @@
               </ul>
             </div>
           </li>
-          <li><a href="listing_1.php">Gifts</a>
+          <li><a href="listing_1.php">Сыйлықтар</a>
             <div class="s_submenu">
-              <h3>Inside Gifts</h3>
+              <h3>Сыйлықтар ішінде</h3>
               <ul class="s_list_1 clearfix">
-                <li><a href="listing_1.php">Perfumes</a></li>
-                <li><a href="listing_1.php">Spirits and Beers</a></li>
-                <li><a href="listing_1.php">Wines</a></li>
-                <li><a href="listing_1.php">Flowers</a></li>
-                <li><a href="listing_1.php">Chocolates and sweets</a></li>
-                <li><a href="listing_1.php">Toys and Games</a></li>
-                <li><a href="listing_1.php">Pets</a></li>
+                <li><a href="listing_1.php">Парфюмерия</a></li>
+                <li><a href="listing_1.php">Рух пен сыра</a></li>
+                <li><a href="listing_1.php">Шарап</a></li>
+                <li><a href="listing_1.php">Гүлдер</a></li>
+                <li><a href="listing_1.php">Шоколад және тәттілер</a></li>
+                <li><a href="listing_1.php">Ойындар мен ойыншықтар</a></li>
+                <li><a href="listing_1.php">Үй жануарлары</a></li>
               </ul>
               <span class="clear border_eee"></span>
-              <h3>Gifts Brands</h3>
+              <h3>брендтік сыйлықтар</h3>
               <ul class="s_list_1 clearfix">
                 <li><a href="listing_1.php">Adidas</a></li>
                 <li><a href="listing_1.php">Armani</a></li>
@@ -161,50 +161,50 @@
               </ul>
             </div>
           </li>
-          <li><a href="listing_1.php">At home</a>
+          <li><a href="listing_1.php">Үй үшін</a>
             <div class="s_submenu">
-              <h3>Inside At home</h3>
+              <h3>Үй ішінде</h3>
               <ul class="s_list_1 clearfix">
-                <li><a href="listing_1.php">Furniture</a></li>
-                <li><a href="listing_1.php">Garden</a></li>
-                <li><a href="listing_1.php">Appliances</a></li>
-                <li><a href="listing_1.php">Pet Supplies</a></li>
-                <li><a href="listing_1.php">Tools and Accessories</a></li>
-                <li><a href="listing_1.php">Lighting</a></li>
-                <li><a href="listing_1.php">Food and Drink</a></li>
+                <li><a href="listing_1.php">Жиһаз</a></li>
+                <li><a href="listing_1.php">Бақ</a></li>
+                <li><a href="listing_1.php">Техника</a></li>
+                <li><a href="listing_1.php">Жануарларды жеткізу</a></li>
+                <li><a href="listing_1.php">Құралдар мен керек-жарақтары</a></li>
+                <li><a href="listing_1.php">Жарықтандыру</a></li>
+                <li><a href="listing_1.php">Азық-түлік және сусындар</a></li>
               </ul>
             </div>
           </li>
-          <li><a href="listing_1.php">Health</a>
+          <li><a href="listing_1.php">Денсаулық</a>
             <div class="s_submenu">
-              <h3>Inside Health</h3>
+              <h3>Денсаулық ішінде</h3>
               <ul class="s_list_1 clearfix">
-                <li><a href="listing_1.php">Suplements</a></li>
-                <li><a href="listing_1.php">Cosmetics</a></li>
-                <li><a href="listing_1.php">Personal Care</a></li>
+                <li><a href="listing_1.php">Қоспалар</a></li>
+                <li><a href="listing_1.php">Косметикалар</a></li>
+                <li><a href="listing_1.php">Жеке күтім</a></li>
               </ul>
             </div>
           </li>
-          <li><a href="listing_1.php">Jewellery</a>
+          <li><a href="listing_1.php">Зергерлік</a>
             <div class="s_submenu">
-              <h3>Inside Jewellery</h3>
+              <h3>Зергерлік ішінде</h3>
               <ul class="s_list_1 clearfix">
-                <li><a href="listing_1.php">Necklaces</a></li>
-                <li><a href="listing_1.php">Rings</a></li>
-                <li><a href="listing_1.php">Bracelets</a></li>
-                <li><a href="listing_1.php">Earrings</a></li>
-                <li><a href="listing_1.php">Pendants</a></li>
+                <li><a href="listing_1.php">Алқалар</a></li>
+                <li><a href="listing_1.php">Сақиналар</a></li>
+                <li><a href="listing_1.php">Білезіктер</a></li>
+                <li><a href="listing_1.php">Сырғалар</a></li>
+                <li><a href="listing_1.php">Кулондар</a></li>
               </ul>
             </div>
           </li>
-          <li><a href="listing_1.php">Books</a>
+          <li><a href="listing_1.php">Кітаптар</a>
             <div class="s_submenu">
-              <h3>Inside Books</h3>
+              <h3>Кітап ішінде</h3>
               <ul class="s_list_1 clearfix">
-                <li><a href="listing_1.php">Fantasy</a></li>
-                <li><a href="listing_1.php">Love Stories</a></li>
-                <li><a href="listing_1.php">Science Fiction</a></li>
-                <li><a href="listing_1.php">Educational</a></li>
+                <li><a href="listing_1.php">Қиял</a></li>
+                <li><a href="listing_1.php">Махаббат дастандары</a></li>
+                <li><a href="listing_1.php">Ғылыми фантастика</a></li>
+                <li><a href="listing_1.php">Оқу</a></li>
               </ul>
             </div>
           </li>
@@ -214,7 +214,7 @@
       <div id="cart_menu" class="s_nav">
       	<a href="cart.php"><span class="s_icon"></span> <small class="s_text">Кәрзеңке</small><span class="s_grand_total s_main_color">$0.00</span></a>
         <div class="s_submenu s_cart_holder">
-          <p class="s_mb_0">0 items</p>
+          <p class="s_mb_0">0 элементтер</p>
         </div>
       </div>
       
