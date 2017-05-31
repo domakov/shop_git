@@ -43,7 +43,7 @@ $sql="SELECT * from tovar";
  +    <div id="intro_wrap">
  +      <div id="product_intro" class="container_12">
  +        <div id="product_intro_info" class="grid_5">
- +          <div style="position: relative;">
+          <div style="position: relative;">
  +            <h2><a href="product.html">Samsung SyncMaster 941BW</a></h2>
  +            <div class="s_rating_holder">
  +              <p class="s_rating s_rating_big s_rating_5"> <span style="width: 60%;" class="s_percent"></span> </p>
