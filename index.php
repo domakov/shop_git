@@ -67,7 +67,7 @@ LIMIT 6";
 				  ?>
 				  </p>
 				  <div class="s_price_holder">
-					<p class="s_price"> <span class="s_currency s_before">$</span>384.67 </p>
+					<p class="s_price"> <span class="s_currency s_before">$</span><?=$array["t_price"];?></p>
 				  </div>
 				</div>
 				<?}?>
