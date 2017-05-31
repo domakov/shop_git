@@ -31,16 +31,20 @@
 ?>
   <!-- end of header --> 
  
-
+<?
+$sql="SELECT * from tovar";
+$res=fetchAll($sql);
+?>
   <!-- ********************** --> 
   <!--     I N T R O          --> 
   <!-- ********************** --> 
+  <?var_dump($res);?>
   <div id="intro">
     <div id="intro_wrap">
       <div id="product_intro" class="container_12">
         <div id="product_intro_info" class="grid_5">
           <div style="position: relative;">
-            <h2><a href="product.php">Samsung SyncMaster 941BW</a></h2>
+            <h2><a href="product.php"><?=$res[1]["t_name"];?></a></h2>
             <div class="s_rating_holder">
               <p class="s_rating s_rating_big s_rating_5"> <span style="width: 60%;" class="s_percent"></span> </p>
               <span class="s_average">3 out of 5</span> </div>
