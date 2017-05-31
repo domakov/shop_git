@@ -111,7 +111,7 @@ include_once("includes/header.php");
         <form id="login" action="orders.html" method="post">
           <div class="s_row_3 clearfix">
            Мен тұрақты тұтынушымын.
-<br />
+			<br/>
             <br />
             <label><strong>Электрондық пошта:</strong></label>
             <input type="text" size="35" class="required email" />
