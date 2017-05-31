@@ -13,13 +13,13 @@ function fetchAll($sql)
 	$res=mysqli_query($conn, $sql);
 	$num=mysqli_num_rows($res);
 	
-	if($res) {
+	if($num>0) {
 		while($arr = mysqli_fetch_assoc($res)){ 
 			 $result[] = $arr; 
 		} 
 	}
 	else{
-		return (mysqli_errno." ".mysqli_error);;
+		return (mysqli_errno($conn)." ".mysqli_error($conn));
 	}
 	return $result;
 }
