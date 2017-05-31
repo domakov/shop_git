@@ -11,8 +11,8 @@
 <link rel="stylesheet" type="text/css" href="stylesheet/ie.css" media="screen" />
 <![endif]-->
 
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.11/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
 <script type="text/javascript" src="js/shoppica.js"></script>
 
 
@@ -41,8 +41,7 @@ LIMIT 6";
   <!-- ********************** --> 
   <!--     I N T R O          --> 
   <!-- ********************** --> 
-	<script type="text/javascript" src="js/jquery/jquery.slides.js"></script> 
-    <script type="text/javascript" src="js/shoppica.products_slide.js"></script>
+	
   <div id="intro">
       <div id="intro_wrap">
         <div id="product_intro" class="container_12">
@@ -56,7 +55,7 @@ LIMIT 6";
 				echo "relative;";} 
 				else 
 				{
-				echo"none;";}
+				echo"none; display:none;";}
 				?>">
 				  <h2><a href="product.html"><?=$array["t_name"];?></a></h2>
 				  <div class="s_rating_holder">
@@ -93,7 +92,8 @@ LIMIT 6";
     </div>
   
   <!-- end of intro --> 
-  
+  <script type="text/javascript" src="js/jquery/jquery.slides.js"></script> 
+    <script type="text/javascript" src="js/shoppica.products_slide.js"></script>
   
   <!-- ********************** --> 
   <!--      C O N T E N T     --> 
