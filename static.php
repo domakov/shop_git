@@ -59,9 +59,9 @@ include_once("includes/header.php");
   <div id="content" class="container_12">
 
     <div class="grid_12">
-			<h2>12 баған тор (позициясы 2-деңгей)</h2>
-			<h3>Позициясы 3-деңгей</h3>
-			<h4>Позициясы 4-деңгей</h4>
+			<h2>12 баған тор (2-деңгей позициясы)</h2>
+			<h3>3-деңгей позициясы</h3>
+			<h4>4-деңгей позициясы </h4>
 			<p>Өнімдерін Үлкен таңдау
 SHOPPICA - Қазақстанда сәнді киім, аяқ киім және аксессуарлар үшін ірі онлайн дүкен.
 Каталогтан сіз бүкіл әлем бойынша спорттық жабдықтар мен косметика брендтерің, соның ішінде екі миллионнан астам бірқатар элементтер таба аласыз. Біздің коллекцияда - 1000-нан астам брендтер, 500 - белгілі аяқ киім  өндірушілер.
@@ -155,35 +155,35 @@ SHOPPICA Express: Алматы, Астана, Ақтөбе, Ақтау, Атыр
     <div class="clear"></div>
     
     <div class="grid_4">
-    	<h2>Grid 4</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ipsum dolor, blandit ac imperdiet vel, viverra in sapien. Praesent dignissim elementum semper</p>
+    	<h2>Тор 4</h2>
+			<p>* Әр мүшелікке және сауалнамаға 10 ұпай есептеледі, жалпы ұпай саны 100-ден аспайды. Ұпай жарамдылығы - 1 жыл есептеу күнінен бастап.</p>
     </div>
     <div class="grid_4">
-    	<h2>Grid 4</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ipsum dolor, blandit ac imperdiet vel, viverra in sapien. Praesent dignissim elementum semper</p>
+    	<h2>Тор 4</h2>
+			<p>* Әр мүшелікке және сауалнамаға 10 ұпай есептеледі, жалпы ұпай саны 100-ден аспайды. Ұпай жарамдылығы - 1 жыл есептеу күнінен бастап.</p>
     </div>
     <div class="grid_4">
-    	<h2>Grid 4</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ipsum dolor, blandit ac imperdiet vel, viverra in sapien. Praesent dignissim elementum semper</p>
+    	<h2>Тор 4</h2>
+			<p>* Әр мүшелікке және сауалнамаға 10 ұпай есептеледі, жалпы ұпай саны 100-ден аспайды. Ұпай жарамдылығы - 1 жыл есептеу күнінен бастап.</p>
     </div>
     
     <div class="clear"></div>
 
     <div class="grid_3">
-    	<h2>Grid 3</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ipsum dolor, blandit ac imperdiet vel, viverra in sapien. Praesent dignissim elementum semper</p>
+    	<h2>Тор 3</h2>
+			<p>* Әр мүшелікке және сауалнамаға 10 ұпай есептеледі, жалпы ұпай саны 100-ден аспайды. Ұпай жарамдылығы - 1 жыл есептеу күнінен бастап.</p>
     </div>
     <div class="grid_3">
-    	<h2>Grid 3</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ipsum dolor, blandit ac imperdiet vel, viverra in sapien. Praesent dignissim elementum semper</p>
+    	<h2>Тор 3</h2>
+			<p>* Әр мүшелікке және сауалнамаға 10 ұпай есептеледі, жалпы ұпай саны 100-ден аспайды. Ұпай жарамдылығы - 1 жыл есептеу күнінен бастап.</p>
     </div>
     <div class="grid_3">
-    	<h2>Grid 3</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ipsum dolor, blandit ac imperdiet vel, viverra in sapien. Praesent dignissim elementum semper</p>
+    	<h2>Тор 3</h2>
+			<p>* Әр мүшелікке және сауалнамаға 10 ұпай есептеледі, жалпы ұпай саны 100-ден аспайды. Ұпай жарамдылығы - 1 жыл есептеу күнінен бастап.</p>
     </div>
     <div class="grid_3">
-    	<h2>Grid 3</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ipsum dolor, blandit ac imperdiet vel, viverra in sapien. Praesent dignissim elementum semper</p>
+    	<h2>Тор 3</h2>
+			<p>* Әр мүшелікке және сауалнамаға 10 ұпай есептеледі, жалпы ұпай саны 100-ден аспайды. Ұпай жарамдылығы - 1 жыл есептеу күнінен бастап.</p>
     </div>
     
     <div class="clear"></div>
