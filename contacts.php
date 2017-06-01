@@ -93,7 +93,7 @@ include_once("includes/header.php");
     
     <div id="contacts" class="s_info_page grid_12">
      	
-      <h2><span class="s_secondary_color">Дүкен</span>Мекен-жай</h2>
+      <h2><span class="s_secondary_color">Дүкен  </span> Мекен-жай</h2>
       
       <p class="alpha grid_4"><strong>Shoppica дүкені</strong><br /> 5 Shoppica Blvd<br /> New York<br /> 1000</p>
       <p class="grid_4"><strong>Телефон:</strong><br /> +1 (0) 7007001</p>
