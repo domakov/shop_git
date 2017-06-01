@@ -1558,7 +1558,7 @@ body.s_layout_fixed #wrapper {
 #categories > ul > li > a {
   padding: 0 10px;
   letter-spacing: -1px;
-  font-size: 16px;
+  font-size: 15px;
   font-family: "Ubuntu Regular", sans-serif;
 }
 #categories > ul > li.s_selected > a {
