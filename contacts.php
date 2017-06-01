@@ -73,11 +73,11 @@ include_once("includes/header.php");
     <div id="intro_wrap">
       <div class="container_12">
         <div id="breadcrumbs" class="grid_12">
-          <a href="">Home</a>
+          <a href="">Басты бет</a>
           &gt;
-          <a href="">Contact Us</a>
+          <a href="">Бізбен байланыс</a>
         </div>
-        <h1>Contact Us</h1>
+        <h1>Бізбен байланыс</h1>
       </div>
     </div>
   </div>
@@ -93,37 +93,37 @@ include_once("includes/header.php");
     
     <div id="contacts" class="s_info_page grid_12">
      	
-      <h2><span class="s_secondary_color">Shop</span> address</h2>
+      <h2><span class="s_secondary_color">Дүкен</span>Мекен-жай</h2>
       
-      <p class="alpha grid_4"><strong>Shoppica store</strong><br /> 5 Shoppica Blvd<br /> New York<br /> 1000</p>
-      <p class="grid_4"><strong>Telephone:</strong><br /> +1 (0) 7007001</p>
-      <p class="omega grid_4"><strong>Fax:</strong><br /> +1 (0) 7007002</p>
+      <p class="alpha grid_4"><strong>Shoppica дүкені</strong><br /> 5 Shoppica Blvd<br /> New York<br /> 1000</p>
+      <p class="grid_4"><strong>Телефон:</strong><br /> +1 (0) 7007001</p>
+      <p class="omega grid_4"><strong>Факс:</strong><br /> +1 (0) 7007002</p>
 
       <br />
       <span class="clear border_ddd"></span>
       <br />
       
       
-      <h2><span class="s_secondary_color">Send</span> a message</h2>
+      <h2><span class="s_secondary_color">Жіберу</span> Хабарлама </h2>
 
       <form id="contact_form" action="#" method="post" enctype="multipart/form-data">
       	<div id="contact_form_icon"></div>
         
         <div class="s_row_3 clearfix">
-          <label><strong>First Name:</strong> *</label>
+          <label><strong>Аты:</strong> *</label>
           <input type="text" size="40" class="required" title="Name must be between 3 and 32 characters!" />
         </div>
         <div class="s_row_3 clearfix">
-          <label><strong>E-Mail Address:</strong> *</label>
+          <label><strong>Электрондық пошта:</strong> *</label>
           <input type="text" size="40" class="required email" title="E-Mail Address does not appear to be valid!" />
         </div>
         <div class="s_row_3 clearfix">
-          <label><strong>Enquiry:</strong> *</label>
+          <label><strong>Сұраныс:</strong> *</label>
           <div class="s_full">
             <textarea id="enquiry" style="width: 98%;" rows="10" class="required" title="Enquiry must be between 10 and 3000 characters!"></textarea>
           </div>
         </div>
-        <a class="s_button_1 s_main_color_bgr" onclick="$('#contact_form').submit();"><span class="s_text">Send message</span></a>
+        <a class="s_button_1 s_main_color_bgr" onclick="$('#contact_form').submit();"><span class="s_text">Хат жіберу</span></a>
       </form>
 
     </div>
@@ -131,21 +131,21 @@ include_once("includes/header.php");
     <div id="right_col" class="grid_3">
 
       <div id="information_module" class="s_box">
-        <h2>Information</h2>
+        <h2>Ақпарат</h2>
         <ul class="s_list_1">
-          <li><a href="static.html">About Shoppica</a></li>
-          <li><a href="static.html">Privacy Policy</a></li>
-          <li><a href="static.html">Terms &amp; Conditions</a></li>
-          <li><a href="contacts.html">Contact Us</a></li>
-          <li><a href="sitemap.html">Site Map</a></li>
+          <li><a href="static.html">Shoppica туралы</a></li>
+          <li><a href="static.html">Құпиялылық саясаты</a></li>
+          <li><a href="static.html">Терминдер & AMP; шарттары</a></li>
+          <li><a href="contacts.html">Бізбен хабарласыңыз</a></li>
+          <li><a href="sitemap.html">Сайт картасы</a></li>
         </ul>
       </div>
   
       <div id="featured_side" class="s_box clearfix">
-        <h2>Featured</h2>
+        <h2>Үздік</h2>
         <div class="s_item s_size_1 clearfix">
           <a class="s_thumb" href="product.php"><img src="images/dummy/pic_8.jpg" width="38" height="38" alt="White football trainers" /></a>
-          <h3><a href="product.php">White football trainers</a></h3>
+          <h3><a href="product.php">Ақ футбол жаттықтырушылары</a></h3>
           <p><a href="product.php"><span class="s_main_color"><span class="s_currency s_before">£</span>117.50</span></a></p>
         </div>
         <div class="s_item s_size_1 clearfix">
