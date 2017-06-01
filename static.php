@@ -59,86 +59,95 @@ include_once("includes/header.php");
   <div id="content" class="container_12">
 
     <div class="grid_12">
-			<h2>12 column grid (heading level 2)</h2>
-			<h3>Heading level 3</h3>
-			<h4>Heading level 4</h4>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ipsum dolor, blandit ac imperdiet vel, viverra in sapien. Praesent dignissim elementum semper. Pellentesque pharetra mi eget leo sodales elementum. Fusce ut dolor elit, in cursus nisl. Aliquam et ante enim. Phasellus lobortis tristique nibh, vel varius ligula luctus vitae. Phasellus tincidunt malesuada nunc quis ullamcorper. Aliquam rutrum est ut lectus laoreet ultricies. Proin sollicitudin ante vel libero mattis fringilla. Donec lacinia dapibus lorem, eu adipiscing dui mollis et. Etiam id luctus mauris. Nam nulla lectus, dictum sed gravida ac, ultricies interdum magna. Quisque ac leo diam. Nulla libero erat, aliquam varius adipiscing id, varius pharetra enim. Maecenas urna enim, tincidunt ac tristique nec, porttitor eu eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum pharetra mauris, in faucibus nibh pharetra eu. Sed sed porttitor nunc.</p>
+			<h2>12 баған тор (позициясы 2-деңгей)</h2>
+			<h3>Позициясы 3-деңгей</h3>
+			<h4>Позициясы 4-деңгей</h4>
+			<p>Өнімдерін Үлкен таңдау
+SHOPPICA - Қазақстанда сәнді киім, аяқ киім және аксессуарлар үшін ірі онлайн дүкен.
+Каталогтан сіз бүкіл әлем бойынша спорттық жабдықтар мен косметика брендтерің, соның ішінде екі миллионнан астам бірқатар элементтер таба аласыз. Біздің коллекцияда - 1000-нан астам брендтер, 500 - белгілі аяқ киім  өндірушілер.
+80 елден Біздің жабдықтаушылар халықаралық стандарттарға сәйкес.Сізге кепілдендірілген сапалы өнімдер ұсынамыз және түпнұсқалығын сертификаттары бар.</p>
 			<img class="wrap_left" width="200" src="images/dummy/pic_1.jpg" />
-			<p>Praesent ornare rutrum sapien. Phasellus et massa eget turpis suscipit volutpat. Donec hendrerit leo sed tellus venenatis tristique. Integer volutpat, ante non vestibulum vestibulum, erat dolor pulvinar dolor, et congue augue nisi non massa. Morbi vehicula malesuada magna sit amet congue. Quisque commodo tristique nisi, et tristique sapien vehicula a. Fusce et fermentum neque. Nullam nibh augue, euismod a semper at, elementum nec nisi. Mauris dignissim erat nec erat sollicitudin porta eu volutpat ante. Suspendisse id mi non erat laoreet porta. Morbi pharetra, nisi ut vulputate ultrices, massa velit mollis lectus, et aliquet sem ipsum quis metus. Praesent sollicitudin sapien sit amet nunc commodo vulputate interdum elit suscipit. Sed pellentesque libero in odio vulputate ut euismod purus posuere. Curabitur tincidunt tortor et purus accumsan gravida. Aenean eleifend, enim sed porta tincidunt, augue ligula euismod quam, tincidunt varius justo tortor quis risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut ut sollicitudin nisl. </p>
+			<p>Жеткізу және киіп көру
+SHOPPICA - қызмет еуропалық деңгейі.
+Біз бүкіл елімізде тауарларды жылдам жеткізуді қамтамасыз етеміз. SHOPPICA Express: Алматы, Астана, Ақтөбе, Ақтау, Атырау, Көкшетау, Қарағанды, Тараз, Теміртау, Өскемен, Шымкент, Павлодар, Петропавл, Орал, Қостанай, Қызылорда -  қысқа мерзімде әр қаладағы  дүкендерге тауарды жеткізеді.Ал  SHOPPICA Super Express қызметі, Астана және Алматы қалаларына, тауарды келесі күні жеткізеді. Сонымен қатар Қазақстан Қазпоштамен де басқа қалаларға жеткізу бар.Жаңалықтар сондай-ақ жеңілдіктер мен науқандар туралы  бірінші болып  біздің почтамыз арқылы біле аласыз SHOPPICA.kz </p>
 			<img class="wrap_right" width="200" src="images/dummy/pic_2.jpg" />
-			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam mauris mauris, pulvinar eu placerat sit amet, venenatis vitae odio. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi quam ipsum, sagittis sed feugiat et, tincidunt nec urna. Praesent bibendum cursus eros, ut tristique ante ornare ac. Nulla ut dolor eros. Aliquam a nisi eget justo posuere interdum. Praesent quis elit a lectus pulvinar semper. Fusce sed sapien at enim vestibulum vehicula. Vestibulum et massa mauris. Praesent in metus ligula, non consequat turpis. Aenean turpis orci, mollis sed commodo vel, vehicula id ante. Donec enim est, vehicula ac ornare eget, faucibus nec dui. Donec nisl dolor, congue in volutpat id, tincidunt at massa. Nulla vel gravida dolor. Aliquam vulputate, risus et lacinia lacinia, est tellus venenatis nisl, id rhoncus risus sem sed felis. Praesent varius mattis velit, sit amet sodales erat congue ut. Quisque vel est justo, ac convallis tortor. Cras scelerisque sollicitudin sem, id lacinia lacus rutrum at. Aliquam porta purus vel enim consequat porttitor. In non augue id metus viverra dictum facilisis non nibh. </p>
+			<p>Төлем және Қайтару
+Ақшаны поштадағы қолма-қол  сату өкіліне немесе ірі қалалардағы SHOPPICA Express кредиттік карта арқылы , немесе қолма-қол ақша - алысымен тапсырысыңызды төлеуіңізге болады. Төлем жүйелеу кезінде онлайн жасалуы мүмкін.
+30 күн ішінде 14 күн және сауда өкілінің ішінде тауарларды шығару пункттері арқылы: Сіз пошта, сондай-ақ жаңа тәртіпті  бір өнімнің өтеуі кем дегенде 14 күн ішінде тауарды қайтаруға болады.
+SHOPPICA Express: Алматы, Астана, Ақтөбе, Ақтау, Атырау, Көкшетау, Қарағанды, Тараз, Теміртау, Өскемен, Шымкент, Павлодар, Петропавл, Орал, Қостанай, Қызылорда -  қысқа мерзімде әр қаладағы  дүкендерге тауарды жеткізеді
+Біздің веб-сайтымызда аяқ киім, шалбар, курткалар, және тағы басқалар сатып алу кезінде, сіз SHOPPICA дүкенімен сатып алу - о тез, оңай және тиімді екенін білесіз !. </p>
     </div>
     
     <div class="clear"></div>
     
     <div class="grid_6">
-    	<h2>Grid 6</h2>
+    	<h2>Тор 6</h2>
       <table class="s_table" width="100%" cellpadding="0" cellspacing="0" border="0">
       	<tr>
-        	<th>Table Header 1</th>
-        	<th>Table Header 2</th>
-        	<th>Table Header 3</th>
-        	<th>Table Header 4</th>
+        	<th>1-кесте үстіңгі деректеме</th>
+        	<th>2-кесте үстіңгі деректеме</th>
+        	<th>3-кесте үстіңгі деректеме</th>
+        	<th>4-кесте үстіңгі деректеме</th>
         </tr>
         <tr>
-          <td>Cell 1</td>
-          <td>Cell 2</td>
-          <td>Cell 3</td>
-          <td>Cell 4</td>
+          <td>1-ұялы </td>
+          <td>2-ұялы</td>
+          <td>3-ұялы</td>
+          <td>4-ұялы</td>
         </tr>
         <tr>
-          <td>Cell 1</td>
-          <td>Cell 2</td>
-          <td>Cell 3</td>
-          <td>Cell 4</td>
+          <td>1-ұялы</td>
+          <td>2-ұялы</td>
+          <td>3-ұялы</td>
+          <td>4-ұялы</td>
         </tr>
         <tr>
-          <td>Cell 1</td>
-          <td>Cell 2</td>
-          <td>Cell 3</td>
-          <td>Cell 4</td>
+          <td>1-ұялы</td>
+          <td>2-ұялы</td>
+          <td>3-ұялы</td>
+          <td>4-ұялы</td>
         </tr>
         <tr>
-          <td>Cell 1</td>
-          <td>Cell 2</td>
-          <td>Cell 3</td>
-          <td>Cell 4</td>
+          <td>1-ұялы</td>
+          <td>2-ұялы</td>
+          <td>3-ұялы</td>
+          <td>4-ұялы</td>
         </tr>
         <tr>
-          <td>Cell 1</td>
-          <td>Cell 2</td>
-          <td>Cell 3</td>
-          <td>Cell 4</td>
+          <td>1-ұялы</td>
+          <td>2-ұялы</td>
+          <td>3-ұялы</td>
+          <td>4-ұялы</td>
         </tr>
       </table>
     </div>
     
     <div class="grid_6">
-    	<h2>Grid 6</h2>
+    	<h2>Тор 6</h2>
       <table class="s_table_1" width="100%" cellpadding="0" cellspacing="0" border="0">
       	<tr>
-        	<th>Table Header 1</th>
-        	<th>Table Header 2</th>
-        	<th>Table Header 3</th>
-        	<th>Table Header 4</th>
+        	<th>1-кесте үстіңгі деректеме</th>
+        	<th>2-кесте үстіңгі деректеме</th>
+        	<th>3-кесте үстіңгі деректеме</th>
+        	<th>4-кесте үстіңгі деректеме</th>
         </tr>
         <tr>
-          <td>Cell 1</td>
-          <td>Cell 2</td>
-          <td>Cell 3</td>
-          <td>Cell 4</td>
+          <td>1-ұялы</td>
+          <td>2-ұялы</td>
+          <td>3-ұялы</td>
+          <td>4-ұялы</td>
         </tr>
         <tr>
-          <td>Cell 1</td>
-          <td>Cell 2</td>
-          <td>Cell 3</td>
-          <td>Cell 4</td>
+          <td>1-ұялы</td>
+          <td>2-ұялы</td>
+          <td>3-ұялы</td>
+          <td>4-ұялы</td>
         </tr>
         <tr>
-          <td>Cell 1</td>
-          <td>Cell 2</td>
-          <td>Cell 3</td>
-          <td>Cell 4</td>
+          <td>1-ұялы</td>
+          <td>2-ұялы</td>
+          <td>3-ұялы</td>
+          <td>4-ұялы</td>
         </tr>
       </table>
     </div>
