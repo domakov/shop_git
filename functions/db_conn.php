@@ -26,5 +26,11 @@ function fetchOne($sql){
 	$result=mysqli_query($conn,$sql);
 	return $result;
 }
+function fetchArray($sql){
+	$conn=$GLOBALS["conn"];	
+	$result=mysqli_query($conn,$sql);
+	$array=mysqli_fetch_array($result);
+	return $array;
+}
 //mysqli_close();
 ?>
