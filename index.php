@@ -32,7 +32,7 @@
   <!-- end of header --> 
  
 <?
-$sql="SELECT * from tovar 
+$sql="SELECT * from tovar
 INNER JOIN foto ON tovar.id_tovar = foto.id_tovar
 INNER JOIN category ON tovar.t_category = category.id_category 
 LIMIT 6";

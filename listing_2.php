@@ -94,102 +94,28 @@ include_once("includes/header.php");
       </div>
 
       <div class="clear"></div>
-      
+	   <?
+			$sql="SELECT * from tovar
+			INNER JOIN foto ON foto.id_tovar = tovar.id_tovar
+			INNER JOIN category ON tovar.t_category = category.id_category
+			LIMIT 3";
+			$res=fetchAll($sql);
+		?>
+		
       <div class="s_listing s_grid_view clearfix">
+	    <?
+		  foreach($res as $array) {
+		?>
       
-        <div class="s_item grid_3"> <a class="s_thumb" href="product.php"><img src="images/dummy/pic_1.jpg" title="Samsung SyncMaster 941BW" alt="Samsung SyncMaster 941BW" /></a>
-          <h3><a href="product.php">Samsung SyncMaster 941BW</a></h3>
-          <p class="s_model">Product 6</p>
-          <p class="s_price"><span class="s_currency s_before">$</span>387.42</p>
+        <div class="s_item grid_3"> <a class="s_thumb" href="product.php"><img src="<?=$array["f_link"];?>" title="Samsung SyncMaster 941BW" alt="Samsung SyncMaster 941BW" /></a>
+          <h3><a href="product.php"><?=$array["t_name"];?></a></h3>
+          <p class="s_model"><?=$array['c_name'];?></p>
+          <p class="s_price"><span class="s_currency s_before">$</span><?=$array["t_price"];?></p>
           <p class="s_rating s_rating_5"><span style="width: 60%;" class="s_percent"></span></p>
           <a class="s_button_add_to_cart" href="product.php"><span class="s_icon_16"><span class="s_icon"></span>Add to Cart</span></a>
         </div>
-
-        <div class="s_item grid_3"> <a class="s_thumb" href="product.php"><img src="images/dummy/pic_2.jpg" title="Casual brownies" alt="Casual brownies" /></a>
-          <h3><a href="product.php">Casual brownies</a></h3>
-          <p class="s_model">Product 7</p>
-          <p class="s_price"><span class="s_currency s_before">$</span>193.71</p>
-          <a class="s_button_add_to_cart" href="product.php"><span class="s_icon_16"><span class="s_icon"></span>Add to Cart</span></a>
-        </div>
-
-        <div class="s_item grid_3"> <a class="s_thumb" href="product.php"><img src="images/dummy/pic_3.jpg" title="White football trainers" alt="White football trainers" /></a>
-          <h3><a href="product.php">White football trainers</a></h3>
-          <p class="s_model">Product 8</p>
-          <p class="s_price"><span class="s_currency s_before">$</span>193.71</p>
-          <a class="s_button_add_to_cart" href="product.php"><span class="s_icon_16"><span class="s_icon"></span>Add to Cart</span></a>
-        </div>
-
-        <div class="clear"></div>
-
-        <div class="s_item grid_3"> <a class="s_thumb" href="product.php"><img src="images/dummy/pic_4.jpg" title="Brown moccasins" alt="Brown moccasins" /></a>
-          <h3><a href="product.php">Brown moccasins</a></h3>
-          <p class="s_model">Product 9</p>
-          <p class="s_price"><span class="s_currency s_before">$</span>193.71</p>
-          <a class="s_button_add_to_cart" href="product.php"><span class="s_icon_16"><span class="s_icon"></span>Add to Cart</span></a>
-        </div>
-        
-        <div class="s_item grid_3"> <a class="s_thumb" href="product.php"><img src="images/dummy/pic_5.jpg" title="Stylish high heels " alt="Stylish high heels " /></a>
-          <h3><a href="product.php">Stylish high heels </a></h3>
-          <p class="s_model">product 11</p>
-          <p class="s_price"><span class="s_currency s_before">$</span>195.65</p>
-          <a class="s_button_add_to_cart" href="product.php"><span class="s_icon_16"><span class="s_icon"></span>Add to Cart</span></a>
-        </div>
-
-        <div class="s_item grid_3"> <a class="s_thumb" href="product.php"><img src="images/dummy/pic_6.jpg" title="Summer Pink" alt="Summer Pink" /></a>
-          <h3><a href="product.php">Summer Pink</a></h3>
-          <p class="s_model">Product 14</p>
-          <p class="s_price"><span class="s_currency s_before">$</span>968.55</p>
-          <a class="s_button_add_to_cart" href="product.php"><span class="s_icon_16"><span class="s_icon"></span>Add to Cart</span></a>
-        </div>
-
-        <div class="clear"></div>
-
-        <div class="s_item grid_3"> <a class="s_thumb" href="product.php"><img src="images/dummy/pic_7.jpg" title="Sony VAIO" alt="Sony VAIO" /></a>
-          <h3><a href="product.php">Sony VAIO</a></h3>
-          <p class="s_model">Product 19</p>
-          <p class="s_price s_promo_price"><span class="s_old_price"><span class="s_currency s_before">$</span>1,937.10</span> <span class="s_currency s_before">$</span>1,743.39</p>
-          <p class="s_rating s_rating_5"><span style="width: 100%;" class="s_percent"></span></p>
-          <a class="s_button_add_to_cart" href="product.php"><span class="s_icon_16"><span class="s_icon"></span>Add to Cart</span></a>
-        </div>
-        
-        <div class="s_item grid_3"> <a class="s_thumb" href="product.php"><img src="images/dummy/pic_8.jpg" title="iPod Classic" alt="iPod Classic" /></a>
-          <h3><a href="product.php">iPod Classic</a></h3>
-          <p class="s_model">product 20</p>
-          <p class="s_price"><span class="s_currency s_before">$</span>193.71</p>
-          <a class="s_button_add_to_cart" href="product.php"><span class="s_icon_16"><span class="s_icon"></span>Add to Cart</span></a>
-        </div>
-        
-        <div class="s_item grid_3"> <a class="s_thumb" href="product.php"><img src="images/dummy/pic_9.jpg" title="Black&amp;White - classy sneakers" alt="Black&amp;White - classy sneakers" /></a>
-          <h3><a href="product.php">Black&amp;White - classy sneakers</a></h3>
-          <p class="s_model">Product 8</p>
-          <p class="s_price"><span class="s_currency s_before">$</span>193.71</p>
-          <a class="s_button_add_to_cart" href="product.php"><span class="s_icon_16"><span class="s_icon"></span>Add to Cart</span></a>
-        </div>
-
-        <div class="clear"></div>
-
-        <div class="s_item grid_3"> <a class="s_thumb" href="product.php"><img src="images/dummy/pic_10.jpg" title="Adidas Gazella" alt="Adidas Gazella" /></a>
-          <h3><a href="product.php">Adidas Gazella</a></h3>
-          <p class="s_model">Product 6</p>
-          <p class="s_price"><span class="s_currency s_before">$</span>387.42</p>
-          <a class="s_button_add_to_cart" href="product.php"><span class="s_icon_16"><span class="s_icon"></span>Add to Cart</span></a>
-        </div>
-        
-        <div class="s_item grid_3"> <a class="s_thumb" href="product.php"><img src="images/dummy/pic_1.jpg" title="Classy shoes" alt="Classy shoes" /></a>
-          <h3><a href="product.php">Classy shoes</a></h3>
-          <p class="s_model">Product 19</p>
-          <p class="s_price"><span class="s_currency s_before">$</span>1,937.10</p>
-          <a class="s_button_add_to_cart" href="product.php"><span class="s_icon_16"><span class="s_icon"></span>Add to Cart</span></a>
-        </div>
-
-        <div class="s_item grid_3"> <a class="s_thumb" href="product.php"><img src="images/dummy/pic_2.jpg" title="Red classic" alt="Red classic" /></a>
-          <h3><a href="product.php">Red classic</a></h3>
-          <p class="s_model">Product 14</p>
-          <p class="s_price"><span class="s_currency s_before">$</span>968.55</p>
-          <a class="s_button_add_to_cart" href="product.php"><span class="s_icon_16"><span class="s_icon"></span>Add to Cart</span></a>
-        </div>
-        
-        <div class="clear"></div>
+		
+		<?}?>
 
       </div>
 

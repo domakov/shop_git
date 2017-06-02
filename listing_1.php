@@ -94,86 +94,37 @@ include_once("includes/header.php");
       </div>
 
       <div class="clear"></div>
+		<?
+			if(!$_GET['id']){
+			$sqlt="SELECT * from tovar";
+			}
+			else {
+			$sqlt ="SELECT * FROM tovar
+			INNER JOIN foto ON foto.id_tovar = tovar.id_tovar
+			INNER JOIN category ON tovar.t_category = category.id_category
+			WHERE t_category = ".$_GET['id'];
+			}
+			
+			$tovar=fetchAll($sqlt);
+			//var_dump($tovar);
+		?>
 
       <div class="s_listing s_list_view clearfix">
-
+          <?
+		  foreach($tovar as $array) {
+		  ?>
         <div class="s_item clearfix">
-          <div class="grid_3 alpha"> <a class="s_thumb" href="product.php"><img src="images/dummy/pic_1.jpg" title="Leica M7" alt="Leica M7" /></a> </div>
+          <div class="grid_3 alpha"> <a class="s_thumb" href="product.php"><img src="<?=$array["f_link"];?>" title="Leica M7" alt="Leica M7" /></a> </div>
           <div class="grid_6 omega">
-            <h3><a href="product.php">Leica M7</a></h3>
-            <p class="s_model">Product 4</p>
-            <p class="s_price s_promo_price"><span class="s_old_price"><span class="s_currency s_before">£</span>940.00</span> <span class="s_currency s_before">£</span>822.50</p>
-            <p class="s_description">Engineered with pro-level features and performance, the 12.3-effective-megapixel D300 combines brand new technologies with advanced features inherited from Nikon&#39;s newly announced D3 profes...</p>
+            <h3><a href="product.php"><?=$array["t_name"];?></a></h3>
+            <p class="s_model"><?=$array['c_name'];?></p>
+            <p class="s_price s_promo_price"><span class="s_old_price"><span class="s_currency s_before">$</span><?=$array["t_sale"];?></span> <span class="s_currency s_before">$</span><?=$array["t_price"];?></p>
+            <p class="s_description"><?=$array["t_description"];?></p>
             <a class="s_button_add_to_cart" href="product.php"><span class="s_icon_16"><span class="s_icon"></span>Add to Cart</span></a>
           </div>
         </div>
-
         <div class="clear"></div>
-
-        <div class="s_item clearfix">
-          <div class="grid_3 alpha"> <a class="s_thumb" href="product.php"><img src="images/dummy/pic_2.jpg" title="Canon Digital Ixus 200 IS" alt="Canon Digital Ixus 200 IS" /></a> </div>
-          <div class="grid_6 omega">
-            <h3><a href="product.php">Canon Digital Ixus 200 IS</a></h3>
-            <p class="s_model">Product 7</p>
-            <p class="s_price"><span class="s_currency s_before">£</span>117.50</p>
-            <p class="s_description">Born to be worn. Clip on the worlds most wearable music player and take up to 240 songs with you anywhere. Choose from five colors including four new hues to make your musical fashion stateme...</p>
-            <a class="s_button_add_to_cart" href="product.php"><span class="s_icon_16"><span class="s_icon"></span>Add to Cart</span></a>
-          </div>
-        </div>
-
-        <div class="clear"></div>
-
-        <div class="s_item clearfix">
-          <div class="grid_3 alpha"> <a class="s_thumb" href="product.php"><img src="images/dummy/pic_3.jpg" title="Casio Exilim Zoom" alt="Casio Exilim Zoom" /></a> </div>
-          <div class="grid_6 omega">
-            <h3><a href="product.php">Casio Exilim Zoom</a></h3>
-            <p class="s_model">Product 7</p>
-            <p class="s_price"><span class="s_currency s_before">£</span>117.50</p>
-            <p class="s_description">Born to be worn. Clip on the worlds most wearable music player and take up to 240 songs with you anywhere. Choose from five colors including four new hues to make your musical fashion stateme...</p>
-            <a class="s_button_add_to_cart" href="product.php"><span class="s_icon_16"><span class="s_icon"></span>Add to Cart</span></a>
-          </div>
-        </div>
-
-        <div class="clear"></div>
-
-        <div class="s_item clearfix">
-          <div class="grid_3 alpha"> <a class="s_thumb" href="product.php"><img src="images/dummy/pic_4.jpg" title="Samsung P200" alt="Samsung P200" /></a> </div>
-          <div class="grid_6 omega">
-            <h3><a href="product.php">Samsung P200</a></h3>
-            <p class="s_model">Product 6</p>
-            <p class="s_price"><span class="s_currency s_before">£</span>235.00</p>
-            <p class="s_description">Imagine the advantages of going big without slowing down. The big 19&quot; 941BW monitor combines wide aspect ratio with fast pixel response time, for bigger images, more room to work and crisp mot...</p>
-            <a class="s_button_add_to_cart" href="product.php"><span class="s_icon_16"><span class="s_icon"></span>Add to Cart</span></a>
-          </div>
-        </div>
-
-        <div class="clear"></div>
-
-        <div class="s_item clearfix">
-          <div class="grid_3 alpha"> <a class="s_thumb" href="product.php"><img src="images/dummy/pic_5.jpg" title="Panasonic Lumix" alt="Panasonic Lumix" /></a> </div>
-          <div class="grid_6 omega">
-            <h3><a href="product.php">Panasonic Lumix</a></h3>
-            <p class="s_model">Product 4</p>
-            <p class="s_price"><span class="s_currency s_before">£</span>94.00</p>
-            <p class="s_description"> Engineered with pro-level features and performance, the 12.3-effective-megapixel D300 combines brand new technologies with advanced features inherited from Nikon&#39;s newly announced D3 profes...</p>
-            <a class="s_button_add_to_cart" href="product.php"><span class="s_icon_16"><span class="s_icon"></span>Add to Cart</span></a>
-          </div>
-        </div>
-
-        <div class="clear"></div>
-
-        <div class="s_item clearfix last">
-          <div class="grid_3 alpha"> <a class="s_thumb" href="product.php"><img src="images/dummy/pic_6.jpg" title="Sony Cyber Shot S1000" alt="Sony Cyber Shot S1000" /></a> </div>
-          <div class="grid_6 omega">
-            <h3><a href="product.php">Sony Cyber Shot S1000</a></h3>
-            <p class="s_model">Product 8</p>
-            <p class="s_price"><span class="s_currency s_before">£</span>117.50</p>
-            <p class="s_description"> Heading Proin ut ornare risus. Sed tristique, massa vel rhoncus tempus, ligula quam ultrices enim, varius euismod neque erat quis sapien. Curabitur eget quam quis magna ultricies aliquam. Ut...</p>
-            <a class="s_button_add_to_cart" href="product.php"><span class="s_icon_16"><span class="s_icon"></span>Add to Cart</span></a>
-          </div>
-        </div>
-
-        <div class="clear"></div>
+		<?}?>
 
       </div>
       

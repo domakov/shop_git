@@ -44,11 +44,21 @@
           <li><a href=""><img src="images/flags/de.png" alt="Deutsch" /> немецкий</a></li>
         </ul>
       </div>
-      
+		<?
+		
+		$sql="SELECT * from category";
+		
+		$res=fetchAll($sql);
+		?>
+	
+	
       <div id="categories" class="s_nav">
         <ul>
           <li id="menu_home"> <a href="index.php">Басты бет</a> </li>
-          <li> <a href="listing_1.php">Электроника</a>
+		  <?
+		  foreach($res as $array) {
+		  ?>
+          <li> <a href="listing_1.php?id=<?=$array["id_category"];?>"><?=$array["c_name"];?></a>
             <div class="s_submenu">
               <h3>Электроника ішінде</h3>
               <ul class="s_list_1 clearfix">
@@ -74,140 +84,8 @@
                 <li><a href="listing_1.php">Sony</a></li>
               </ul>
             </div>
-          </li>
-          <li> <a href="listing_1.php">Компьютерлер</a>
-            <div class="s_submenu">
-              <h3>Inside Computers</h3>
-              <ul class="s_list_1 clearfix">
-                <li><a href="listing_1.php">Үстелдік компьютерлер</a></li>
-                <li><a href="listing_1.php">ноутбуктер</a></li>
-                <li><a href="listing_1.php">Мониторлар</a></li>
-                <li><a href="listing_1.php">компоненттері</a></li>
-                <li><a href="listing_1.php">Бағдарламалық қамтамасыз ету</a></li>
-              </ul>
-              <span class="clear border_eee"></span>
-              <h3>Компьютерлік брендтер</h3>
-              <ul class="s_list_1 clearfix">
-                <li><a href="listing_1.php">Hugo Boss</a></li>
-                <li><a href="listing_1.php">Sony</a></li>
-              </ul>
-            </div>
-          </li>
-          <li><a href="listing_1.php">Киім</a>
-            <div class="s_submenu">
-              <h3>Киім</h3>
-              <ul class="s_list_1 clearfix">
-                <li><a href="listing_1.php">Әйелдер киімі</a></li>
-                <li><a href="listing_1.php">Ерлер киімі</a></li>
-                <li><a href="listing_1.php">Ұл балалалр</a></li>
-                <li><a href="listing_1.php">Қыз балалар</a></li>
-                <li><a href="listing_1.php">Нәрестелер</a></li>
-              </ul>
-              <span class="clear border_eee"></span>
-              <h3>Киім брендтер</h3>
-              <ul class="s_list_1 clearfix">
-                <li><a href="listing_1.php">Bvlgari</a></li>
-                <li><a href="listing_1.php">Elisabeth Arden</a></li>
-              </ul>
-            </div>
-          </li>
-          <li><a href="listing_1.php">Аяқ киім</a>
-            <div class="s_submenu">
-              <h3>Аяқ киім ішінде</h3>
-              <ul class="s_list_1 clearfix">
-                <li><a href="listing_1.php">Әйелдер аяқ киімі</a></li>
-                <li><a href="listing_1.php">Ерлер аяқ киімі</a></li>
-                <li><a href="listing_1.php">Балалар аяқ киімі</a></li>
-                <li><a href="listing_1.php">Спорттық аяқ киім</a></li>
-              </ul>
-              <span class="clear border_eee"></span>
-              <h3>Аяқ киім бренді</h3>
-              <ul class="s_list_1 clearfix">
-                <li><a href="listing_1.php">Adidas</a></li>
-                <li><a href="listing_1.php">Apple</a></li>
-                <li><a href="listing_1.php">Armani</a></li>
-                <li><a href="listing_1.php">Balenciaga</a></li>
-                <li><a href="listing_1.php">Christian Dior</a></li>
-                <li><a href="listing_1.php">Nike</a></li>
-                <li><a href="listing_1.php">Samsung</a></li>
-                <li><a href="listing_1.php">Sony</a></li>
-              </ul>
-            </div>
-          </li>
-          <li><a href="listing_1.php">Сыйлықтар</a>
-            <div class="s_submenu">
-              <h3>Сыйлықтар ішінде</h3>
-              <ul class="s_list_1 clearfix">
-                <li><a href="listing_1.php">Парфюмерия</a></li>
-                <li><a href="listing_1.php">Рух пен сыра</a></li>
-                <li><a href="listing_1.php">Шарап</a></li>
-                <li><a href="listing_1.php">Гүлдер</a></li>
-                <li><a href="listing_1.php">Шоколад және тәттілер</a></li>
-                <li><a href="listing_1.php">Ойындар мен ойыншықтар</a></li>
-                <li><a href="listing_1.php">Үй жануарлары</a></li>
-              </ul>
-              <span class="clear border_eee"></span>
-              <h3>брендтік сыйлықтар</h3>
-              <ul class="s_list_1 clearfix">
-                <li><a href="listing_1.php">Adidas</a></li>
-                <li><a href="listing_1.php">Armani</a></li>
-                <li><a href="listing_1.php">Balenciaga</a></li>
-                <li><a href="listing_1.php">Bvlgari</a></li>
-                <li><a href="listing_1.php">Canon</a></li>
-                <li><a href="listing_1.php">Christian Dior</a></li>
-                <li><a href="listing_1.php">Elisabeth Arden</a></li>
-                <li><a href="listing_1.php">Hugo Boss</a></li>
-                <li><a href="listing_1.php">Sony</a></li>
-              </ul>
-            </div>
-          </li>
-          <li><a href="listing_1.php">Үй үшін</a>
-            <div class="s_submenu">
-              <h3>Үй ішінде</h3>
-              <ul class="s_list_1 clearfix">
-                <li><a href="listing_1.php">Жиһаз</a></li>
-                <li><a href="listing_1.php">Бақ</a></li>
-                <li><a href="listing_1.php">Техника</a></li>
-                <li><a href="listing_1.php">Жануарларды жеткізу</a></li>
-                <li><a href="listing_1.php">Құралдар мен керек-жарақтары</a></li>
-                <li><a href="listing_1.php">Жарықтандыру</a></li>
-                <li><a href="listing_1.php">Азық-түлік және сусындар</a></li>
-              </ul>
-            </div>
-          </li>
-          <li><a href="listing_1.php">Денсаулық</a>
-            <div class="s_submenu">
-              <h3>Денсаулық ішінде</h3>
-              <ul class="s_list_1 clearfix">
-                <li><a href="listing_1.php">Қоспалар</a></li>
-                <li><a href="listing_1.php">Косметикалар</a></li>
-                <li><a href="listing_1.php">Жеке күтім</a></li>
-              </ul>
-            </div>
-          </li>
-          <li><a href="listing_1.php">Зергерлік</a>
-            <div class="s_submenu">
-              <h3>Зергерлік ішінде</h3>
-              <ul class="s_list_1 clearfix">
-                <li><a href="listing_1.php">Алқалар</a></li>
-                <li><a href="listing_1.php">Сақиналар</a></li>
-                <li><a href="listing_1.php">Білезіктер</a></li>
-                <li><a href="listing_1.php">Сырғалар</a></li>
-                <li><a href="listing_1.php">Кулондар</a></li>
-              </ul>
-            </div>
-          </li>
-          <li><a href="listing_1.php">Кітаптар</a>
-            <div class="s_submenu">
-              <h3>Кітап ішінде</h3>
-              <ul class="s_list_1 clearfix">
-                <li><a href="listing_1.php">Қиял</a></li>
-                <li><a href="listing_1.php">Махаббат дастандары</a></li>
-                <li><a href="listing_1.php">Ғылыми фантастика</a></li>
-                <li><a href="listing_1.php">Оқу</a></li>
-              </ul>
-            </div>
-          </li>
+          </li>		
+		  <?}?>
         </ul>
       </div>
       
