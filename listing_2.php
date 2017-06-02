@@ -107,12 +107,12 @@ include_once("includes/header.php");
 		  foreach($res as $array) {
 		?>
       
-        <div class="s_item grid_3"> <a class="s_thumb" href="product.php"><img src="<?=$array["f_link"];?>" title="Samsung SyncMaster 941BW" alt="Samsung SyncMaster 941BW" /></a>
-          <h3><a href="product.php"><?=$array["t_name"];?></a></h3>
+        <div class="s_item grid_3"> <a class="s_thumb" href="product.php?id=<?=$array["id_tovar"];?>"><img src="<?=$array["f_link"];?>" title="Samsung SyncMaster 941BW" alt="Samsung SyncMaster 941BW" /></a>
+          <h3><a href="product.php?id=<?=$array["id_tovar"];?>"><?=$array["t_name"];?></a></h3>
           <p class="s_model"><?=$array['c_name'];?></p>
           <p class="s_price"><span class="s_currency s_before">$</span><?=$array["t_price"];?></p>
           <p class="s_rating s_rating_5"><span style="width: 60%;" class="s_percent"></span></p>
-          <a class="s_button_add_to_cart" href="product.php"><span class="s_icon_16"><span class="s_icon"></span>Add to Cart</span></a>
+          <a class="s_button_add_to_cart" href="product.php?id=<?=$array["id_tovar"];?>"><span class="s_icon_16"><span class="s_icon"></span>Add to Cart</span></a>
         </div>
 		
 		<?}?>
