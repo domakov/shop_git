@@ -1,7 +1,16 @@
+	<?
+	include_once('functions/db_conn.php');
+	$sql="SELECT * from category";
+	$res=fetchAll($sql);?>
+	
  <div id="footer" class="container_12">
     <div id="footer_categories" class="clearfix">
+	 <?
+		  foreach($res as $array) {
+		  ?>
       <div class="grid_2">
-        <h2>Электрондар</h2>
+	 
+        <a href="listing_1.php?id=<?=$array["id_category"];?>" style="font-size:16px;color:rgb(255, 153, 0);"><?=$array["c_name"];?></a>
         <ul class="s_list_1">
           <li><a href="">Камера</a></li>
           <li><a href="">Аудио</a></li>
@@ -11,57 +20,7 @@
           <li><a href="">Автокөлік аудиосы</a></li>
         </ul>
       </div>
-      <div class="grid_2">
-        <h2>Компьютерлер</h2>
-        <ul class="s_list_1">
-          <li><a href="">Дербес Компьютерлер</a></li>
-          <li><a href="">Ноутбуктер</a></li>
-          <li><a href="">Мониторлар</a></li>
-          <li><a href="">Компоненттері</a></li>
-          <li><a href="">Бағдарламалар</a></li>
-        </ul>
-      </div>
-      <div class="grid_2">
-        <h2>Киімдер</h2>
-        <ul class="s_list_1">
-          <li><a href="">Әйелдер Киімі</a></li>
-          <li><a href="">Ерлер Киімі</a></li>
-          <li><a href="">Ұлдар</a></li>
-          <li><a href="">Қыздар</a></li>
-          <li><a href="">Балалар және Нәрестелер</a></li>
-        </ul>
-      </div>
-      <div class="grid_2">
-        <h2>Аяқ киімдер</h2>
-        <ul class="s_list_1">
-          <li><a href="">Әйелдер Аяқ киімі</a></li>
-          <li><a href="">Ерлер Аяқ киімі</a></li>
-          <li><a href="">Балалар Аяқ киімі</a></li>
-          <li><a href="">Спорттық Аяқ киімі</a></li>
-        </ul>
-      </div>
-      <div class="grid_2">
-        <h2>Сыйлықтар</h2>
-        <ul class="s_list_1">
-          <li><a href="">Парфюмериялар</a></li>
-          <li><a href="">Әтірлер</a></li>
-          <li><a href="">Вино</a></li>
-          <li><a href="">Гүлдер</a></li>
-          <li><a href="">Шоколад және тәттілер</a></li>
-          <li><a href="">Ойындар мен ойыншықтар</a></li>
-        </ul>
-      </div>
-      <div class="grid_2">
-        <h2>Үй жиһаздары</h2>
-        <ul class="s_list_1">
-          <li><a href="">Жиһаз</a></li>
-          <li><a href="">Бақ</a></li>
-          <li><a href="">Техникалық</a></li>
-          <li><a href="">ЗОО товарлары</a></li>
-          <li><a href="">Құрал-саймандар</a></li>
-          <li><a href="">Жарықтандырғыштар</a></li>
-        </ul>
-      </div>
+     <?}?>
       <div class="clear"></div>
       <div class="grid_12 border_eee"></div>
     </div>

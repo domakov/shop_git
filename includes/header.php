@@ -6,12 +6,11 @@
     	<a id="site_logo" href="index.php">Shoppica store - Premium e-Commerce Theme</a> 
      <div id="system_navigation" class="s_nav">
         <ul class="s_list_1 clearfix">
-          <li><a href="index.php">Главная</a></li>
-          <li><a href="cart.php">Корзина</a></li>
-          <li><a href="static.php">О нас</a></li>
-          <li><a href="contacts.php">контакт</a></li>
+          <li><a href="index.php">Басты бет</a></li>
+          <li><a href="static.php">Біз туралы</a></li>
+          <li><a href="contacts.php">Байланыс</a></li>
 		   <? if(!$_SESSION["loginn"]){?>
-		  <li><a href="login.php">Авторизоваться</a></li>
+		  <li><a href="login.php">Кіру</a></li>
 		  <?} else{ $sql="SELECT name,surname,email,year,role.r_name FROM user
 		 INNER JOIN role ON user.id_role = role.id_role
 									where user.email='".$_SESSION["loginn"]."'";
@@ -19,7 +18,7 @@
 					$q=fetchAll($sql);
 				//var_dump($q);			
 					?>		
-		  <li><a href="">Мой профиль</a>
+		  <li><a href="">Менің профилім</a>
             <div class="s_submenu " style="background-color: #fff;padding:20px;width: 200px;">
                <ul class="s_list_1 clearfix list">
 			   <?foreach($q as $array){?>
