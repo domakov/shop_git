@@ -3,19 +3,44 @@
   ?>
   <div id="header" class="container_12">
     <div class="grid_12">
-    
     	<a id="site_logo" href="index.php">Shoppica store - Premium e-Commerce Theme</a> 
-
-      <div id="system_navigation" class="s_nav">
+     <div id="system_navigation" class="s_nav">
         <ul class="s_list_1 clearfix">
           <li><a href="index.php">Главная</a></li>
-          <li><a href="login.php">Авторизоваться</a></li>
           <li><a href="cart.php">Корзина</a></li>
           <li><a href="static.php">О нас</a></li>
           <li><a href="contacts.php">контакт</a></li>
+		   <? if(!$_SESSION["loginn"]){?>
+		  <li><a href="login.php">Авторизоваться</a></li>
+		  <?} else{ $sql="SELECT name,surname,email,year,role.r_name FROM user
+		 INNER JOIN role ON user.id_role = role.id_role
+									where user.email='".$_SESSION["loginn"]."'";
+					//				echo($sql);
+					$q=fetchAll($sql);
+				//var_dump($q);			
+					?>		
+		  <li><a href="">Мой профиль</a>
+            <div class="s_submenu " style="background-color: #fff;padding:20px;width: 200px;">
+               <ul class="s_list_1 clearfix list">
+			   <?foreach($q as $array){?>
+                 <li><b>Е-mail:  </b><?echo $_SESSION["loginn"]?></li>
+				 <span class="clear border_eee"></span>
+				 <li><b>Аты: </b> <?=$array["name"]?> </li>
+				 <span class="clear border_eee"></span>
+				 <li><b>Тегі: </b><?=$array["surname"]?></li>
+				 <span class="clear border_eee"></span>
+				 <li><b>Туған жылы: </b><?=$array["year"]?> </li>
+				 <span class="clear border_eee"></span>
+				 <li><b>Рөлі: </b><?=$array["r_name"]?> </li>
+				 <span class="clear border_eee"></span>
+				 <?}?>
+				  <li><a href="index.php?q=quit">Шығу</a>  <a href="#" style="float:right">Өзгерту</a></li>
+				</ul>
+            </div>
+          </li> 
+		 <?}?>   
         </ul>
       </div>
-
       <div id="site_search">
       	<a id="show_search" href="javascript:;" title="Search:"></a>
         <div id="search_bar" class="clearfix">
@@ -27,8 +52,7 @@
           </select>
           <a class="s_button_1 s_secondary_color_bgr"><span class="s_text">Go</span></a> <a class="s_advanced s_main_color" href="">Кеңейтілген іздеу</a>
         </div>
-      </div>
-      
+      </div> 
       <div id="language_switcher" class="s_switcher"> 
 	  <span class="s_selected">Доллар</span>
         <ul class="s_options">
@@ -37,12 +61,12 @@
           <li><a href="">Доллар</a></li>
         </ul>
       </div>
-      
       <div id="currency_switcher" class="s_switcher"> <span class="s_selected"><img src="images/flags/gb.png" alt="English" /> английский</span>
         <ul class="s_options">
           <li><a href=""><img src="images/flags/gb.png" alt="English" /> английский</a></li>
           <li><a href=""><img src="images/flags/de.png" alt="Deutsch" /> немецкий</a></li>
         </ul>
+
       </div>
 		<?
 		
@@ -51,7 +75,9 @@
 		$res=fetchAll($sql);
 		?>
 	
-	
+
+      </div> 
+
       <div id="categories" class="s_nav">
         <ul>
           <li id="menu_home"> <a href="index.php">Басты бет</a> </li>
@@ -88,13 +114,11 @@
 		  <?}?>
         </ul>
       </div>
-      
       <div id="cart_menu" class="s_nav">
       	<a href="cart.php"><span class="s_icon"></span> <small class="s_text">Кәрзеңке</small><span class="s_grand_total s_main_color">$0.00</span></a>
         <div class="s_submenu s_cart_holder">
           <p class="s_mb_0">0 элементтер</p>
         </div>
       </div>
-      
     </div>
   </div>
