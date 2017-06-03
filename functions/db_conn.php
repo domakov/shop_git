@@ -11,16 +11,17 @@ function fetchAll($sql)
 		$conn=$GLOBALS["conn"];	
 		$res=mysqli_query($conn, $sql);
 		$num=mysqli_num_rows($res);
-		if($num>0) {
-			while($arr = mysqli_fetch_assoc($res)){ 
-			$result[] = $arr; 
-			} 
-		}
-		else{
-			return (mysqli_errno($conn)." ".mysqli_error($conn));
+	if($num>0) {
+		while($arr = mysqli_fetch_assoc($res)){ 
+			 $result[] = $arr; 
+		} 
+	}
+	else{
+		return (mysqli_errno($conn)." ".mysqli_error($conn));
 	}
 	return $result;
 }
+
 function fetchOne($sql){
 	$conn=$GLOBALS["conn"];	
 	$result=mysqli_query($conn,$sql);
@@ -33,4 +34,10 @@ function fetchArray($sql){
 	return $array;
 }
 //mysqli_close();
+
+$c= mysql_connect("localhost","root","");
+$s= mysql_select_db("db_shop",$c);
+// var_dump($arr);
+//mysqli_close($conn);
+
 ?>

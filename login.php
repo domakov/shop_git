@@ -1,3 +1,6 @@
+<?
+session_start(); 
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en" xml:lang="en" xmlns:fb="http://www.facebook.com/2008/fbml">
 <head>
@@ -49,12 +52,39 @@ $(document).ready(function () {
   <!-- ********************** --> 
   <!--      H E A D E R       --> 
   <!-- ********************** -->
- <?   
-include_once("includes/header.php");
- ?>
+  <?
+    include_once('functions/db_conn.php');
+		if(isset($_POST['sub']))
+		{
+			$log = $_POST['log'];
+			$pass = $_POST['pass'];
+			if($log==null and $pass==null)
+			{
+				$error= "Заполните поле!";
+			}
+				else
+				{
+					$q=mysql_query("SELECT * FROM user WHERE  email='$log' and password='$pass'");
+					$r=mysql_num_rows($q);
+					if($r>0)
+					{
+						$_SESSION["loginn"]=$log;
+						
+					}
+					else 	{ 	
+					$error= "Логин немесе пароль дұрыс емес!";	}
+				}
+		}
+	?>
+	 <?   
+		include_once("includes/header.php");
+		
+	 ?>
+	 
   <!-- end of header --> 
-  
-
+  <?
+  include_once('functions/db_conn.php');
+  ?>
   <!-- ********************** --> 
   <!--     I N T R O          -->
   <!-- ********************** --> 
@@ -75,11 +105,11 @@ include_once("includes/header.php");
   <!-- ********************** --> 
   <!--      C O N T E N T     --> 
   <!-- ********************** --> 
-  <div id="content" class="container_16">
-  
-
-    <div id="login_page" class="grid_16">
-            
+  	
+  <div id="content"		class="container_16">
+  <? if(!$_SESSION["loginn"])
+  {?>
+    <div id="login_page" class="grid_16">  
       <div class="grid_8 alpha">
         <h2 class="s_title_1"><span class="s_secondary_color">Мен жаңа </span> тұтынушымын.</h2>
         <div class="clear"></div>
@@ -87,55 +117,49 @@ include_once("includes/header.php");
           <div class="s_row_3 clearfix">
             <p>Рәсімдеу опциялары:</p>
             <label class="s_radio" for="register">
-              <input type="radio" id="register" checked="checked" />
-              <strong>Тіркелу:</strong>
-            </label>
+             <input type="radio" id="register" checked="checked" />
+             <strong>Тіркелу:</strong>
+			</label>
             <label for="guest">
               <input type="radio" id="guest" />
               <strong>Тапсырыс беру</strong>
             </label>
             <br />
             <p>Тіркелгіні жасау арқылы сіз, тезірек сатып алатын болады, тапсырыстың орындалу барысы туралы жаңартылмаған болуы, және сіз бұрын жасадық тапсырмаларын қадағалап.</p>
-
           </div>
           <span class="clear border_ddd"></span>
           <br />
-          <button class="s_button_1 s_main_color_bgr" type="submit"><span class="s_text">Жалғастыру</span></button>
+          <button class="s_button_1 s_main_color_bgr" type="submit" name="bit" ><span class="s_text">Жалғастыру</span></button>
         </form>
       </div>
-
       <div class="grid_8 omega">
         <h2 class="s_title_1"><span class="s_secondary_color">тұрақты</span> тұтынушы</h2>
-
-        <div class="clear"></div>
-        <form id="login" action="orders.html" method="post">
-          <div class="s_row_3 clearfix">
-           Мен тұрақты тұтынушымын.
-			<br/>
-            <br />
-            <label><strong>Электрондық пошта:</strong></label>
-            <input type="text" size="35" class="required email" />
-            <br />
-            <br />
-            <label><strong>пароль:</strong></label>
-            <input type="password" size="35" class="required" />
-            <br />
-          </div>
-          <span class="clear border_ddd"></span>
-          <br />
-          <div class="s_nav s_size_2 left">
-            <ul class="clearfix">
-              <li><a href="#">пароль ұмыту</a></li>
-            </ul>
-          </div>
-          <button class="s_button_1 s_main_color_bgr" type="submit"><span class="s_text">кіру</span></button>
-        </form>
-      </div>
-
+		<div class="clear"></div>
+			<form id="login" action="" method="POST">
+			  <div class="s_row_3 clearfix">
+			<p style="color:red;font-size:20px"><?echo $error?></p>
+				<label><strong>Электрондық пошта:</strong></label>
+				<input type="text" name="log" size="35" class="required email" />
+				<br />
+				<br />
+				<label><strong>пароль:</strong></label>
+				<input type="password" name="pass" size="35" class="required" />
+				<br />
+			  </div>
+			  <span class="clear border_ddd"></span>
+			  <br />
+			  <div class="s_nav s_size_2 left">
+				<ul class="clearfix">
+				  <li><a href="#">пароль ұмыту</a></li>
+				</ul>
+			  </div>
+			  <button class="s_button_1 s_main_color_bgr" type="submit" name="sub"><span class="s_text">кіру</span></button>
+			</form>
+		</div>
       <div class="clear"></div>
-
     </div>
-    
+	<?}?>
+	
   </div>
   <!-- end of content --> 
   
@@ -151,11 +175,9 @@ include_once("includes/header.php");
   <!--      F O O T E R       --> 
   <!-- ********************** --> 
 
-   <?
- 
- include_once("includes/footer.php");
- 
- ?>
+	<?
+	include_once("includes/footer.php");
+	?>
   <!-- end of FOOTER --> 
   
 </div>

@@ -1,3 +1,9 @@
+<?
+session_start(); 
+if($_GET["q"]&&$_GET["q"]=="quit"){
+unset($_SESSION["loginn"]);
+}
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en" xml:lang="en" xmlns:fb="http://www.facebook.com/2008/fbml">
 <head>
@@ -35,9 +41,12 @@
 $sql="SELECT * from tovar
 INNER JOIN foto ON tovar.id_tovar = foto.id_tovar
 INNER JOIN category ON tovar.t_category = category.id_category 
-LIMIT 6";
+LIMIT 6
+";
 	$res=fetchAll($sql);
 ?>
+
+
   <!-- ********************** --> 
   <!--     I N T R O          --> 
   <!-- ********************** --> 
@@ -74,9 +83,7 @@ LIMIT 6";
           <div id="product_intro_preview">
             <div class="slides_container">
 			<?
-		  
-		  foreach($res as $array){
-		
+				foreach($res as $array){
 		  ?>
               <div class="slideItem" style="display: none"><a href="product.php"><img src="<?=$array["f_link"];?>" alt="" /></a></div>
               
@@ -98,7 +105,8 @@ LIMIT 6";
   <!-- ********************** --> 
   <!--      C O N T E N T     --> 
   <!-- ********************** --> 
-  <div id="content" class="container_12">
+
+ <div id="content" class="container_12">
   
 
     
@@ -120,7 +128,7 @@ LIMIT 6";
           <h3><a href="product.php"><?=$array["t_name"];?></a></h3>
           <p class="s_model"><?=$array["c_name"];?></p>
           <p class="s_price s_promo_price"><span class="s_old_price"><span class="s_currency s_before">$</span><?=$array['t_price'];?></span><span class="s_currency s_before">$</span>
-		  <?echo ($array["t_price"]-($array["t_price"]*$array["t_sale"]/100))?></p>
+		  <?echo ($array["t_pr ice"]-($array["t_price"]*$array["t_sale"]/100))?></p>
           <a class="s_button_add_to_cart" href="product.php"><span class="s_icon_16"><span class="s_icon"></span>Add to Cart</span></a>
         </div>
         <?}}?>
