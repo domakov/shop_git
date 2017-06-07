@@ -113,20 +113,96 @@ $(document).ready(function () {
       <div class="grid_8 alpha">
         <h2 class="s_title_1"><span class="s_secondary_color">Мен жаңа </span> тұтынушымын.</h2>
         <div class="clear"></div>
-        <form id="account" action="forms.html">
-          <div class="s_row_3 clearfix">
-            <p>Рәсімдеу опциялары:</p>
-            <label class="s_radio" for="register">
-             <input type="radio" id="register" checked="checked" />
-             <strong>Тіркелу:</strong>
-			</label>
-            <label for="guest">
-              <input type="radio" id="guest" />
-              <strong>Тапсырыс беру</strong>
-            </label>
-            <br />
-            <p>Тіркелгіні жасау арқылы сіз, тезірек сатып алатын болады, тапсырыстың орындалу барысы туралы жаңартылмаған болуы, және сіз бұрын жасадық тапсырмаларын қадағалап.</p>
-          </div>
+		
+		<?php require_once("functions/db_conn.php"); ?>
+
+
+		  <?php
+
+			if(isset($_POST["register"])){
+
+
+			if(!empty($_POST['name']) && !empty($_POST['surname']) && !empty($_POST['email']) && !empty($_POST['password'])) {
+				$name=$_POST['name'];
+				$surname=$_POST['surname'];
+				$email=$_POST['email'];
+				$password=$_POST['password'];
+			
+			
+			$password = "********";
+			$password = md5($password);
+					
+		
+			$query=mysql_query("SELECT * FROM user WHERE email='".$email."'");
+			$numrows=mysql_num_rows($query);
+			
+			if($numrows==0)
+			{
+			$sql="INSERT INTO user
+					(name, surname, email, password) 
+					VALUES('$name','$surname','$email', '$password')";
+
+			$result=mysql_query($sql);
+
+
+				if($result){
+				 $message = "Account Successfully Created";
+				} else {
+				 $message = "Failed to insert data information!";
+				}
+
+				} else {
+				 $message = "That username already exists! Please try another one!";
+				}
+
+			} else {
+				 $message = "All fields are required!";
+			}
+			}
+		  ?>
+
+
+		<?php if (!empty($message)) {echo "<p class=\"error\">" . "MESSAGE: ". $message . "</p>";} ?>
+				
+			<div class="container mregister">
+						<div id="login">
+				<h1>Тіркелу</h1>
+			<form name="registerform" id="registerform" action="login.php" method="post">
+				<p>
+					<label for="user_login">Аты<br />
+					<input type="text" name="name" id="name" class="input" size="32" value=""  /></label>
+				</p>
+				
+				<p>
+					<label for="user_login">Жөні<br />
+					<input type="text" name="surname" id="surname" class="input" size="32" value=""  /></label>
+				</p>
+				
+				
+				<p>
+					<label for="user_pass">Email<br />
+					<input type="email" name="email" id="email" class="input" value="" size="32" /></label>
+				</p>
+				
+				<p>
+					<label for="user_pass">Password<br />
+					<input type="password" name="password" id="password" class="input" value="" size="32" /></label>
+				</p>
+					
+				
+
+					<p class="submit">
+					<input type="submit" name="register" id="register" class="button" value="Тіркелу" />
+				</p>
+				
+				<p class="regtext">Сіздің поштаңыз бар ма? <a href="login.php" >Кіру</a>!</p>
+			</form>
+				
+				</div>
+				</div>
+		
+        <form id="account" action="index.php">
+          
           <span class="clear border_ddd"></span>
           <br />
           <button class="s_button_1 s_main_color_bgr" type="submit" name="bit" ><span class="s_text">Жалғастыру</span></button>
@@ -161,6 +237,9 @@ $(document).ready(function () {
 	<?}?>
 	
   </div>
+		
+		
+		
   <!-- end of content --> 
   
   <!-- ********************** --> 
