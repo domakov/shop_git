@@ -2,6 +2,7 @@
 session_start();
 ?>
 <?
+
 if(isset($_POST["comment"])){ 
 $id=$_GET["id"];
 	$text=$_POST["text"];
