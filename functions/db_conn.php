@@ -21,7 +21,6 @@ function fetchAll($sql)
 	}
 	return $result;
 }
-
 function fetchOne($sql){
 	$conn=$GLOBALS["conn"];	
 	$result=mysqli_query($conn,$sql);

@@ -1,3 +1,6 @@
+<?
+session_start();
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en" xml:lang="en">
 <head>
@@ -32,7 +35,33 @@ $(document).ready(function() {
 });
 
 </script>
-
+<script type="text/javascript">
+$(document).ready(function () {
+	jQuery.validator.setDefaults({
+			errorElement: "p",
+			errorClass: "s_error_msg",
+			errorPlacement: function(error, element) {
+					error.insertAfter(element);
+			},
+			highlight: function(element, errorClass, validClass) {
+					$(element).addClass("error_element").removeClass(validClass);
+					$(element).parent("div").addClass("s_error_row");
+			},
+			unhighlight: function(element, errorClass, validClass) {
+					$(element).removeClass("error_element").addClass(validClass);
+					$(element).parent("div").removeClass("s_error_row");
+			}
+	});
+	$("#contact_form").validate({
+		rules: {
+			enquiry: {
+					required: true,
+					minlength: 10
+			}
+		}
+	});	
+});
+</script>
 </head>
 
 <body class="s_layout_fixed">
@@ -81,8 +110,9 @@ include_once("includes/product_select.php");
       	<a id="product_image_preview" rel="prettyPhoto[gallery]" href="<?=$tovar["f_link"]?>"><img id="image" src="<?=$tovar["f_link"]?>" title="Leica M7" alt="Leica M7" /></a>
       </div>
       <div id="product_info" class="grid_6 omega">
-        <p class="s_price s_promo_price"><span class="s_old_price">940.00<span class="s_currency s_after"> eur</span></span> 822.50<span class="s_currency s_after"> eur</span></p>
-        <dl class="clearfix">
+                 <p class="s_price s_promo_price"><span class="s_old_price">940.00<span class="s_currency s_before">$</span><?=$array['t_price'];?></span>822.50<span class="s_currency s_before">$</span>
+		  <?echo ($array["t_price"]-($array["t_price"]*$array["t_sale"]/100))?></p>
+	   <dl class="clearfix">
           <dt>Аты</dt>
           <dd><?=$tovar["t_name"];?></dd>
           <dt>Категория</dt>
@@ -123,20 +153,19 @@ include_once("includes/product_select.php");
 			 </div>
             <!-- cpt_container_end -->
           </div>
-             
+             	<form id="contact_form" action="" method="POST">
           <div id="product_reviews" class="s_listing">
-            <div class="pagination"><div class="results">Showing 1 to 1 of 1 (1 Pages)</div></div>
             <h2 class="s_title_1"><span class="s_main_color">Пікір</span> қалдыру</h2>
             <div id="review_title" class="clear"></div>
             <div class="s_row_3 clearfix">
-              <label><strong>Сіздің атыңыз:</strong></label>
-              <input type="text" />
-            </div>
-            <div class="s_row_3 clearfix">
               <label><strong>Сіздің пікіріңіз:</strong></label>
-              <textarea style="width: 98%;" rows="8"></textarea>
+			            <div class="s_full">
+              <textarea name="text" id="enquiry" style="width: 98%;" rows="8" class="required" title="1-3000 аралығында символ болуы тиіс!!!"></textarea>
+			  </div>
               <p class="s_legend"><span style="color: #FF0000;">Note:</span> HTML is not translated!</p>
-            </div>
+        
+		</div>
+		
             <div class="s_row_3 clearfix">
               <label><strong>Rating</strong></label>
               <span class="clear"></span> <span>Bad</span>&nbsp;
@@ -152,9 +181,10 @@ include_once("includes/product_select.php");
               &nbsp; <span>Good</span>
             </div>
             <span class="clear border_ddd"></span>
-			<button name="comment" class="s_button_1 s_main_color_bgr"><span class="s_text">Жалғастыру</span></button>
+			<button name="comment" type=submit class="s_button_1 s_main_color_bgr"><span class="s_text">Жалғастыру</span></button>
 			     <span class="clear border_ddd"></span>
-			<div class="s_review last">
+				 </form>
+			<div class="s_review last">			 
 						 <?
 		  foreach($com as $array) {
 		  ?>
