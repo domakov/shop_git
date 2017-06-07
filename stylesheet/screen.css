@@ -2180,8 +2180,10 @@ body.s_layout_fixed #wrapper {
 #login_page,
 #register,
 #success_message
-{
-  padding-bottom: 30px;
+{ 
+  color: #7EBD1E;
+  padding: 10px;
+  padding-bottom: 10px;
 }
 #login_page .s_row_3 {
   height: 170px;
