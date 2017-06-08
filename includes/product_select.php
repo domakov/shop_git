@@ -45,4 +45,13 @@ INNER JOIN user ON user.id_user=comment.id_user
  WHERE id_tovar=".$tovar["id_tovar"];
 $com=fetchAll($sql_review);
 
+		$sql="SELECT * FROM tovar as t
+		INNER JOIN category as c ON
+		c.id_category=t.t_category
+		INNER JOIN foto as f ON
+	f.id_tovar=t.id_tovar
+		WHERE t.t_category=".$tovar["id_category"];
+		
+		$tov=fetchAll($sql);		
+		
 ?>

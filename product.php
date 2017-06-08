@@ -215,37 +215,21 @@ include_once("includes/header.php");
         </div>
       </div>
       <div id="related_products" class="grid_12 alpha omega">
-        <h2 class="s_title_1"><span class="s_main_color">Related</span> Products</h2>
+        <h2 class="s_title_1"><span class="s_main_color">Ұқсас</span> тауарлар</h2>
         <div class="clear"></div>
+
         <div class="s_grid_view s_listing clearfix">
+		
+	<?
+ foreach($tov as $array)
+{	?>
           <div class="s_item grid_3">
-          	<a class="s_thumb" href="product.php"><img src="images/dummy/pic_4.jpg" title="Panasonic Lumix" alt="Panasonic Lumix" /></a>
-            <h3><a href="product.php">Panasonic Lumix</a></h3>
-            <p class="s_model">Product 4</p>
+          	<a class="s_thumb" href="product.php?id=<?=$array["id_tovar"]?>"><img src="<?=$array["f_link"]?>"/></a>
+            <h3><a href="product.php?id=<?=$array["id_tovar"]?>"><?=$array["t_name"]?></a></h3>
             <p class="s_price">94.00<span class="s_currency s_after"> eur</span></p>
-            <a class="s_button_add_to_cart" href="product.php"><span class="s_icon_16"><span class="s_icon"></span>Add to Cart</span></a>
+			
           </div>
-          <div class="s_item grid_3">
-          	<a class="s_thumb" href="product.php"><img src="images/dummy/pic_5.jpg" title="Panasonic Lumix" alt="Panasonic Lumix" /></a>
-            <h3><a href="product.php">Panasonic Lumix</a></h3>
-            <p class="s_model">Product 4</p>
-            <p class="s_price">94.00<span class="s_currency s_after"> eur</span></p>
-            <a class="s_button_add_to_cart" href="product.php"><span class="s_icon_16"><span class="s_icon"></span>Add to Cart</span></a>
-          </div>
-          <div class="s_item grid_3">
-          	<a class="s_thumb" href="product.php"><img src="images/dummy/pic_6.jpg" title="Panasonic Lumix" alt="Panasonic Lumix" /></a>
-            <h3><a href="product.php">Panasonic Lumix</a></h3>
-            <p class="s_model">Product 4</p>
-            <p class="s_price">94.00<span class="s_currency s_after"> eur</span></p>
-            <a class="s_button_add_to_cart" href="product.php"><span class="s_icon_16"><span class="s_icon"></span>Add to Cart</span></a>
-          </div>
-          <div class="s_item grid_3">
-          	<a class="s_thumb" href="product.php"><img src="images/dummy/pic_7.jpg" title="Panasonic Lumix" alt="Panasonic Lumix" /></a>
-            <h3><a href="product.php">Panasonic Lumix</a></h3>
-            <p class="s_model">Product 4</p>
-            <p class="s_price">94.00<span class="s_currency s_after"> eur</span></p>
-            <a class="s_button_add_to_cart" href="product.php"><span class="s_icon_16"><span class="s_icon"></span>Add to Cart</span></a>
-          </div>
+		  <?}?>
           <div class="clear"></div>
         </div>
       </div>
