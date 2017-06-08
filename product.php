@@ -38,6 +38,28 @@ $(document).ready(function() {
     opacity: 0.5
   });
 
+  
+  
+   $("#add_to_cart").click(function()
+  {
+	var id_user=$("#id_user").val();
+	var id=$("#id_tovar").val();
+	var q=$("#pbq").val();
+	$.ajax({ 
+	type:"POST",
+	data:{"q": q,"id":id,"id_user":id_user},
+	url:"ajax.php", 
+	success:function(data)
+	{
+		$("#tes").text(data); 
+		
+		
+	}
+	})
+});
+  
+  
+  
 });
 
 </script>
@@ -118,6 +140,7 @@ include_once("includes/header.php");
 <p class="s_price s_promo_price"><span class="s_old_price"><?=$tovar["t_price"];?>$<span class="s_currency s_before">$</span></span><?echo ($tovar["t_price"]-($tovar["t_price"]*$tovar["t_sale"]/100))?><span class="s_currency s_before">$</span>
 </p>
 	   <dl class="clearfix">
+	   <input id="id_tovar" hidden name="id" value="<?=$tovar["id_tovar"]?>"/>
           <dt>Аты</dt>
           <dd><?=$tovar["t_name"];?></dd>
           <dt>Категория</dt>
@@ -139,7 +162,8 @@ include_once("includes/header.php");
         </div>
         <div id="product_buy" class="clearfix">
           <label for="product_buy_quantity">Саны:</label>
-          <input id="product_buy_quantity" type="text" size="2" />
+		   <input id="pbq" type="text" size="2" />
+		  <div hidden id="tes"></div>
           <a id="add_to_cart" class="s_main_color_bgr"><span class="s_text"><span class="s_icon"></span> Себетке сақтау</span></a>
         </div>
       </div>
