@@ -10,7 +10,7 @@
           <li><a href="contacts.php">Байланыс</a></li>
 		   <? if(!$_SESSION["loginn"]){?>
 		  <li><a href="login.php">Кіру</a></li>
-		  <?} else{ $sql="SELECT name,surname,email,year,role.r_name FROM user
+		  <?} else{ $sql="SELECT id_user,name,surname,email,year,role.r_name FROM user
 		 INNER JOIN role ON user.id_role = role.id_role
 									where user.email='".$_SESSION["loginn"]."'";
 					//				echo($sql);
@@ -23,6 +23,7 @@
 			   <?foreach($q as $array){?>
                  <li><b>Е-mail:  </b><?echo $_SESSION["loginn"]?></li>
 				 <span class="clear border_eee"></span>
+				<input id="id_user" hidden name="id_user" value="<?=$array["id_user"]?>"/> 
 				 <li><b>Аты: </b> <?=$array["name"]?> </li>
 				 <span class="clear border_eee"></span>
 				 <li><b>Тегі: </b><?=$array["surname"]?></li>
@@ -115,7 +116,9 @@
       <div id="cart_menu" class="s_nav">
       	<a href="cart.php"><span class="s_icon"></span> <small class="s_text">Кәрзеңке</small><span class="s_grand_total s_main_color">$0.00</span></a>
         <div class="s_submenu s_cart_holder">
-          <p class="s_mb_0">0 элементтер</p>
+	
+          <p class="s_mb_0"></p>
+
         </div>
       </div>
     </div>
