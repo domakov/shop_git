@@ -115,58 +115,49 @@ $(document).ready(function () {
         <div class="clear"></div>
 		
 		<?php require_once("functions/db_conn.php"); ?>
-
-
-		  <?php
-
-			if(isset($_POST["register"])){
-
-
-			if(!empty($_POST['name']) && !empty($_POST['surname']) && !empty($_POST['email']) && !empty($_POST['password'])) {
-				$name=$_POST['name'];
-				$surname=$_POST['surname'];
-				$email=$_POST['email'];
-				$password=$_POST['password'];
-			
-			
-			$password = "********";
-			$password = md5($password);
-					
 		
+
+			<?php if (isset($_POST['register'])) 
+			{
+				if(empty($_POST['password'])) {
+					echo '<br><font color="red"><img border="0" src="error.gif" align="middle" alt="Введите пароль !"> Введите пароль!</font>';
+				}
+				elseif (!preg_match("/\A(\w){6,20}\Z/", $_POST['password'])) {
+					echo '<br><font color="red"><img border="0" src="error.gif" align="middle" alt="Пароль слишком короткий!"> Пароль слишком короткий! Пароль должен быть не менее 6 символов! </font>';
+				}
+				elseif(empty($_POST['cpassword'])) {
+					echo '<br><font color="red"><img border="0" src="error.gif" align="middle" alt="Введите подтверждение пароля!"> Введите подтверждение пароля!</font>';
+				}
+				elseif($_POST['password'] != $_POST['cpassword']) {
+					echo '<br><font color="red"><img border="0" src="error.gif" align="middle" alt="Введенные пароли не совпадают!"> Введенные пароли не совпадают!</font>';
+				}                      
+			else
+			{          
+			$name=$_POST['name'];
+			$surname=$_POST['surname'];
+			$email=$_POST['email'];
+			$password=$_POST['password'];
+			$password2=$_POST['cpassword'];
+			$password = md5($password);
+			
+			
 			$query=mysql_query("SELECT * FROM user WHERE email='".$email."'");
 			$numrows=mysql_num_rows($query);
 			
-			if($numrows==0)
-			{
-			$sql="INSERT INTO user
-					(name, surname, email, password) 
+			$sql = "INSERT INTO user(name, surname, email, password) 
 					VALUES('$name','$surname','$email', '$password')";
-
-			$result=mysql_query($sql);
-
-
-				if($result){
-				 $message = "Account Successfully Created";
-				} else {
-				 $message = "Failed to insert data information!";
-				}
-
-				} else {
-				 $message = "That username already exists! Please try another one!";
-				}
-
-			} else {
-				 $message = "All fields are required!";
+			$result = mysql_query($sql) or die(mysql_error());
+			echo "<div align='center'>Тіркелу сәтті өтті!</div>";
 			}
-			}
-		  ?>
+			} 
+			?>
 
 
 		<?php if (!empty($message)) {echo "<p class=\"error\">" . "MESSAGE: ". $message . "</p>";} ?>
 				
 			<div class="container mregister">
 						<div id="login">
-				<h1>Тіркелу</h1>
+				
 			<form name="registerform" id="registerform" action="login.php" method="post">
 				<p>
 					<label for="user_login">Аты<br />
@@ -185,8 +176,13 @@ $(document).ready(function () {
 				</p>
 				
 				<p>
-					<label for="user_pass">Password<br />
+					<label for="user_pass">Құпия сөз<br />
 					<input type="password" name="password" id="password" class="input" value="" size="32" /></label>
+				</p>
+				
+				<p>
+					<label for="user_pass">Құпия сөзді растау<br />
+					<input type="password" name="cpassword" id="password" class="input" value="" size="32" /></label>
 				</p>
 					
 				
