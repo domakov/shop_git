@@ -8,17 +8,16 @@ $id=$_GET["id"];
 	$text=$_POST["text"];
 	$email=$_SESSION["loginn"];	
 	$sql_id='SELECT * FROM `user` WHERE email="'.$email.'"';
-	
 	$result = fetchArray($sql_id);
-	
-	if($email!="" and $text!=""){
-		$sql='INSERT INTO comment(`id_tovar`,`id_user`,`text`) values('.'"'.$id.'"'.','.'"'.$result[id_user].'"'.','.'"'.$text.'"'.')'; 
-		$result = fetchOne($sql);
-				if ($result){
+	if ($_SESSION["loginn"]){
 			$error="Хат жіберілді";
 		}else{
 			$error="Қате" ;
 	}
+	if($email!="" and $text!=""){
+		$sql='INSERT INTO comment(`id_tovar`,`id_user`,`text`) values('.'"'.$id.'"'.','.'"'.$result[id_user].'"'.','.'"'.$text.'"'.')'; 
+		$result = fetchOne($sql);
+				
 	}
 	$_POST[]=null;
 	unset($_POST["comment"]);

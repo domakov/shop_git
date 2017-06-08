@@ -1,11 +1,17 @@
 <?
-session_start();
+session_start();  
+  include_once('functions/db_conn.php');
+ include_once("includes/product_select.php");
 ?>
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en" xml:lang="en">
+
 <head>
+
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Your Store</title>
+<title><?=$tovar["t_name"];?></title>
 <meta name="description" content="My Store" />
 <meta property="og:image" content="images/dummy/pic_1.jpg" />
 
@@ -35,7 +41,6 @@ $(document).ready(function() {
 });
 
 </script>
-
 <script type="text/javascript">
 $(document).ready(function () {
 	jQuery.validator.setDefaults({
@@ -72,16 +77,15 @@ $(document).ready(function () {
   <!-- ********************** --> 
   <!--      H E A D E R       --> 
   <!-- ********************** --> 
-  <?    
+  <!-- end of header --> 
+  
+    <?    
 
 
 include_once("includes/header.php");
-include_once("includes/product_select.php");
+
 
 ?>
-  <!-- end of header --> 
-  
-
   <!-- ********************** --> 
   <!--     I N T R O          -->
   <!-- ********************** --> 
@@ -111,8 +115,8 @@ include_once("includes/product_select.php");
       	<a id="product_image_preview" rel="prettyPhoto[gallery]" href="<?=$tovar["f_link"]?>"><img id="image" src="<?=$tovar["f_link"]?>" title="Leica M7" alt="Leica M7" /></a>
       </div>
       <div id="product_info" class="grid_6 omega">
-                 <p class="s_price s_promo_price"><span class="s_old_price">940.00<span class="s_currency s_before">$</span><?=$array['t_price'];?></span>822.50<span class="s_currency s_before">$</span>
-		  <?echo ($array["t_price"]-($array["t_price"]*$array["t_sale"]/100))?></p>
+<p class="s_price s_promo_price"><span class="s_old_price"><?=$tovar["t_price"];?>$<span class="s_currency s_before">$</span></span><?echo ($tovar["t_price"]-($tovar["t_price"]*$tovar["t_sale"]/100))?><span class="s_currency s_before">$</span>
+</p>
 	   <dl class="clearfix">
           <dt>Аты</dt>
           <dd><?=$tovar["t_name"];?></dd>
@@ -144,7 +148,7 @@ include_once("includes/product_select.php");
         <ul class="s_tabs_nav clearfix">
           <li><a href="#product_description">Сипаттамасы</a></li>
           <li><a href="#product_reviews">Пікірлер (<?=count($comment)?>)</a></li>
-          <li><a href="#product_gallery">Photos (<?=count($foto)?>)</a></li>
+          <li><a href="#product_gallery">Сурет (<?=count($foto)?>)</a></li>
         </ul>
         <div class="s_tab_box">
         

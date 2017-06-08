@@ -1,6 +1,5 @@
-  <?
-  include_once('functions/db_conn.php');
-  ?>
+<?  include_once('functions/db_conn.php');
+?>
   <div id="header" class="container_12">
     <div class="grid_12">
     	<a id="site_logo" href="index.php">Shoppica store - Premium e-Commerce Theme</a> 
