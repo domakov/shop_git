@@ -893,17 +893,18 @@ label.s_radio
   border-radius: 60px;
   /*behavior: url(js/PIE.php);*/
   behavior: url(js/PIE.htc);
-}
+ 
+  }
 .s_price span {
   display: block;
   font-family: "Ubuntu Regular", sans-serif;
 }
 .s_price .s_currency {
-  line-height: 16px;
+
   font-size: 15px;
 }
 .s_old_price {
-  line-height: 16px;
+  
   font-size: 12px;
   text-decoration: line-through;
   opacity: 0.8;

@@ -26,10 +26,14 @@
   <!--      H E A D E R       --> 
   <!-- ********************** -->
  <?    
-
-
 include_once("includes/header.php");
 
+
+$sql="SELECT * from basket 
+INNER JOIN tovar ON basket.id_tov=tovar.id_tovar
+INNER JOIN foto ON tovar.id_tovar=foto.id_tovar 
+INNER JOIN category ON tovar.t_category = category.id_category ";
+$res=fetchAll($sql);
 
 ?>
   <!-- end of header --> 
@@ -45,12 +49,11 @@ include_once("includes/header.php");
           <a href="index.html">Басты бет</a>
            &gt; <a href="cart.html">Кәрзеңке</a>
         </div>
-        <h1>Шоппинг арбашасы(0.00kg)</h1>
       </div>
     </div>
   </div>
   <!-- end of intro -->
-  
+
   
   <!-- ********************** --> 
   <!--      C O N T E N T     --> 
@@ -70,38 +73,25 @@ include_once("includes/header.php");
             <th>Тауар өлшемінің бағасы</th>
             <th>Жалпылама</th>
           </tr>
-          <tr class="even">
-            <td valign="middle"><input type="checkbox" /></td>
-            <td valign="middle"><a href="product.php"><img src="images/dummy/pic_1.jpg" width="60" height="60" alt="Panasonic Lumix" /></a></td>
-            <td valign="middle"><a href="product.php"><strong>Panasonic Lumix</strong></a></td>
-            <td valign="middle">Өнім 4</td>
-            <td valign="middle"><input type="text" size="3" /></td>
-            <td valign="middle">94.00<span class="s_currency s_after"> KZT</span></td>
-            <td valign="middle">94.00<span class="s_currency s_after"> KZT</span></td>
-          </tr>
-          <tr class="odd">
-            <td valign="middle"><input type="checkbox" /></td>
-            <td valign="middle"><a href="product.php"><img src="images/dummy/pic_2.jpg" width="60" height="60" alt="Armani Acqua di Gioia" /></a></td>
-            <td valign="middle"><a href="product.php"><strong>Armani Acqua di Gioia</strong></a></td>
-            <td valign="middle">Өнім 4</td>
-            <td valign="middle"><input type="text" size="3" /></td>
-            <td valign="middle">822.50<span class="s_currency s_after"> KZT</span></td>
-            <td valign="middle">822.50<span class="s_currency s_after"> KZT</span></td>
-          </tr>
-          <tr class="even">
-            <td valign="middle"><input type="checkbox" /></td>
-            <td valign="middle"><a href="product.php"><img src="images/dummy/pic_3.jpg" width="60" height="60" alt="Jameson Whiskey Special Reserve 12 yers" /></a></td>
-            <td valign="middle"><a href="product.php"><strong>Jameson Whiskey Special Reserve 12 yers</strong></a></td>
-            <td valign="middle">Өнім 4</td>
-            <td valign="middle"><input type="text" size="3" /></td>
-            <td valign="middle">117.50<span class="s_currency s_after"> KZT</span></td>
-            <td valign="middle">117.50<span class="s_currency s_after"> KZT</span></td>
-          </tr>
+		<?
+	  
+		foreach($res as $array){?>
+		
+			  <tr class="even">
+				<td valign="middle"><input type="checkbox" /></td>
+				<td valign="middle"><a href="product.php"><img src="<?=$array["f_link"];?>" width="60" height="60" alt="Panasonic Lumix" /></a></td>
+				<td valign="middle"><a href="product.php"><strong><?=$array["t_name"];?></strong></a></td>
+				<td valign="middle"><?=$array["c_name"];?></td>
+				<td valign="middle"><input type="text" size="3" value="<?=$array["b_count"];?>"/></td>
+				<td valign="middle"><?=$array["pay"];?><span class="s_currency s_after"> KZT</span></td>
+				<td valign="middle"><?=($array["pay"]*$array["b_count"]);?><span class="s_currency s_after"> KZT</span></td>
+			  </tr>
+		  <?}?>
         </table>
         <br />
         <p class="s_total"><strong>Аралық:</strong> 880.00<span class="s_currency s_after"> KZT</span></p>
         <p class="s_total"><strong>Қосылған құн салығы 17.5%:</strong> 154.00<span class="s_currency s_after"> KZT</span></p>
-        <p class="s_total s_secondary_color last"><strong>Жалпы:</strong> 1,034.00<span class="s_currency s_after"> KZT</span></p>
+        <p class="s_total s_secondary_color last"><strong>Жалпы:</strong><?=($array[""]);?><span class="s_currency s_after"> KZT</span></p>
                         
         <div class="clear"></div>
         <br />

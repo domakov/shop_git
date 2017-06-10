@@ -117,6 +117,9 @@
       	<a href="cart.php"><span class="s_icon"></span> <small class="s_text">Кәрзеңке</small><span class="s_grand_total s_main_color">$0.00</span></a>
         <div class="s_submenu s_cart_holder">
 	
+		
+		
+		
           <p class="s_mb_0"></p>
 
         </div>

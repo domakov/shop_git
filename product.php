@@ -41,13 +41,15 @@ $(document).ready(function() {
   
   
    $("#add_to_cart").click(function()
-  {
+  { 
+	var pay=$("#pay").val();
 	var id_user=$("#id_user").val();
 	var id=$("#id_tovar").val();
 	var q=$("#pbq").val();
+	var t_name=$("#t_name").val();
 	$.ajax({ 
 	type:"POST",
-	data:{"q": q,"id":id,"id_user":id_user},
+	data:{"q": q,"id":id,"id_user":id_user,"pay":pay,"t_name":t_name},
 	url:"ajax.php", 
 	success:function(data)
 	{
@@ -63,33 +65,33 @@ $(document).ready(function() {
 });
 
 </script>
-<script type="text/javascript">
-$(document).ready(function () {
-	jQuery.validator.setDefaults({
-			errorElement: "p",
-			errorClass: "s_error_msg",
-			errorPlacement: function(error, element) {
-					error.insertAfter(element);
-			},
-			highlight: function(element, errorClass, validClass) {
-					$(element).addClass("error_element").removeClass(validClass);
-					$(element).parent("div").addClass("s_error_row");
-			},
-			unhighlight: function(element, errorClass, validClass) {
-					$(element).removeClass("error_element").addClass(validClass);
-					$(element).parent("div").removeClass("s_error_row");
-			}
-	});
-	$("#contact_form").validate({
-		rules: {
-			enquiry: {
-					required: true,
-					minlength: 10
-			}
-		}
-	});	
-});
-</script>
+ <script type="text/javascript">
+// $(document).ready(function () {
+ // jQuery.validator.setDefaults({
+			 // errorElement: "p",
+			 // errorClass: "s_error_msg",
+			 // errorPlacement: function(error, element) {
+					 // error.insertAfter(element);
+			 // },
+			 // highlight: function(element, errorClass, validClass) {
+					 // $(element).addClass("error_element").removeClass(validClass);
+					// $(element).parent("div").addClass("s_error_row");
+			 // },
+			 // unhighlight: function(element, errorClass, validClass) {
+					 // $(element).removeClass("error_element").addClass(validClass);
+					 // $(element).parent("div").removeClass("s_error_row");
+			 // }
+	 // });
+	 // $("#contact_form").validate({
+		 // rules: {
+			 // enquiry: {
+					 // required: true,
+				 // minlength: 10
+			 // }
+		 // }
+	 // });	
+ // });
+ // </script>
 </head>
 
 <body class="s_layout_fixed">
@@ -105,6 +107,7 @@ $(document).ready(function () {
 
 
 include_once("includes/header.php");
+;
 
 
 ?>
@@ -123,6 +126,7 @@ include_once("includes/header.php");
         <h1>Clothing</h1>
       </div>
     </div>
+		
   </div>
   <!-- end of intro -->
 
@@ -136,36 +140,51 @@ include_once("includes/header.php");
       <div id="product_images" class="grid_6 alpha">
       	<a id="product_image_preview" rel="prettyPhoto[gallery]" href="<?=$tovar["f_link"]?>"><img id="image" src="<?=$tovar["f_link"]?>" title="Leica M7" alt="Leica M7" /></a>
       </div>
-      <div id="product_info" class="grid_6 omega">
-<p class="s_price s_promo_price"><span class="s_old_price"><?=$tovar["t_price"];?>$<span class="s_currency s_before">$</span></span><?echo ($tovar["t_price"]-($tovar["t_price"]*$tovar["t_sale"]/100))?><span class="s_currency s_before">$</span>
-</p>
-	   <dl class="clearfix">
-	   <input id="id_tovar" hidden name="id" value="<?=$tovar["id_tovar"]?>"/>
-          <dt>Аты</dt>
-          <dd><?=$tovar["t_name"];?></dd>
-          <dt>Категория</dt>
-          <dd><?=$tovar["c_name"];?></dd>
-          <dt>Рейтинг</dt>
-          <dd>
-            <p class="s_rating s_rating_5"><span style="width: 100%;" class="s_percent"></span></p>
-          </dd>
+     <div id="product_info" class="grid_6 omega">
+		<p class="s_price s_promo_price">
+		<?if($tovar["t_sale"]>0){?>
+			
+		<span  class="s_old_price">	
+		<span  class="s_currency s_before"><?echo $tovar["t_price"];?>$</span>
+		</span>
+		<?}?>
+		<?echo ($tovar["t_price"]-($tovar["t_price"]*$tovar["t_sale"]/100))?>
+		<span class="s_currency s_before">$</span>
+		</p>
+		
+		
+	
+		
+		<input id="pay" hidden name="pay" value="<?echo ($tovar["t_price"]-($tovar["t_price"]*$tovar["t_sale"]/100))?>"/> 
+		<dl class="clearfix">
+		<input id="id_tovar" hidden name="id" value="<?=$tovar["id_tovar"]?>"/>
+		<dt>Аты</dt>
+		<input id="t_name" hidden name="id" value="<?=$tovar["t_name"]?>"/>
+        <dd><?=$tovar["t_name"];?></dd>
+        <dt>Категория</dt>
+        <dd><?=$tovar["c_name"];?></dd>
+        <dt>Рейтинг</dt>
+        <dd>
+        <p class="s_rating s_rating_5"><span style="width: 100%;" class="s_percent"></span></p>
+        </dd>
         </dl>
-        <div id="product_share" class="clearfix">
+		<div id="product_share" class="clearfix">
           <!-- AddThis Button BEGIN -->
           <div class="addthis_toolbox addthis_default_style ">
           <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
           <a class="addthis_button_tweet"></a>
           <a class="addthis_counter addthis_pill_style"></a>
           </div>
-          <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4de0eff004042e7a"></script>
+        
           <!-- AddThis Button END -->
         </div>
+	
         <div id="product_buy" class="clearfix">
           <label for="product_buy_quantity">Саны:</label>
 		   <input id="pbq" type="text" size="2" />
-		  <div hidden id="tes"></div>
           <a id="add_to_cart" class="s_main_color_bgr"><span class="s_text"><span class="s_icon"></span> Себетке сақтау</span></a>
         </div>
+
       </div>
       <div class="clear"></div>
       <div class="s_tabs grid_12 alpha omega">
@@ -261,155 +280,7 @@ include_once("includes/header.php");
       
     </div>
 
-    
-    <div id="right_col" class="grid_3">
-      <div id="cart_side" class="s_box_1 s_cart_holder">
-        <h2 class="s_secondary_color">Shopping Cart</h2>
-        <div id="cart_side_contents">
-
-          <div class="s_cart_item">
-            <a id="hremove_95" class="s_button_remove" href="cart.html">&nbsp;</a>
-            <span class="block">1x <a href="cart.html">Panasonic Lumix</a></span>
-          </div>
-          <div class="s_cart_item">
-            <a id="hremove_31" class="s_button_remove" href="cart.html">&nbsp;</a>
-            <span class="block">1x <a href="cart.html">Armani Acqua di Gioia</a></span>
-          </div>
-          <div class="s_cart_item">
-            <a id="hremove_87" class="s_button_remove" href="cart.html">&nbsp;</a>
-            <span class="block">1x <a href="cart.html">Jameson Whiskey Special Reserve 12 yers</a></span>
-          </div>
-          <span class="clear s_mb_15 border_eee"></span>
-          <div class="s_total clearfix"><strong class="cart_module_total left">Sub-Total:</strong><span class="cart_module_total">880.00<span class="s_currency s_after"> eur</span></span></div>
-          <div class="s_total clearfix"><strong class="cart_module_total left">VAT 17.5%:</strong><span class="cart_module_total">154.00<span class="s_currency s_after"> eur</span></span></div>
-          <div class="s_total clearfix"><strong class="cart_module_total left">Total:</strong><span class="cart_module_total">1,034.00<span class="s_currency s_after"> eur</span></span></div>
-          <span class="clear s_mb_15"></span>
-          <div class="align_center clearfix">
-            <a class="s_button_1 s_secondary_color_bgr s_ml_0" href="cart.php"><span class="s_text">View Cart</span></a>
-            <a class="s_button_1 s_secondary_color_bgr" href="checkout.html"><span class="s_text">Checkout</span></a>
-          </div>
-
-        </div>
-      </div>
-      
-      <div id="categories_module" class="s_box">
-        <h2>Categories</h2>
-        <div class="s_list_1">
-          <ul>
-          	<li>
-            	<a href="listing_1.html"><b>Electronics</b></a>
-            	<ul>
-              	<li><a href="listing_1.html">Digital Cameras</a></li>
-                <li><a href="listing_1.html">Home Audio</a></li>
-                <li><a href="listing_1.html">Home Cinema</a></li>
-                <li><a href="listing_1.html">Cell Phones</a></li>
-                <li><a href="listing_1.html">MP3 Players</a></li>
-                <li><a href="listing_1.html">Car-Audio</a></li>
-              </ul>
-            </li>
-            <li><a href="listing_1.html">Computers</a></li>
-            <li><a href="listing_1.html">Clothing</a></li>
-            <li><a href="listing_1.html">Shoes</a></li>
-            <li><a href="listing_1.html">Gifts</a></li>
-            <li><a href="listing_1.html">At home</a></li>
-            <li><a href="listing_1.html">Health</a></li>
-            <li><a href="listing_1.html">Jewellery</a></li>
-            <li><a href="listing_1.html">Books</a></li>
-          </ul>
-      	</div>
-			</div>
-      
-    	<div id="brands_module" class="s_box">
-        <h2>Brands</h2>
-        <select onchange="location = this.value">
-          <option> --- Please Select --- </option>
-          <option>Adidas</option>
-          <option>Apple</option>
-          <option>Armani</option>
-          <option>Balenciaga</option>
-          <option>Bvlgari</option>
-          <option>Canon</option>
-          <option>Christian Dior</option>
-          <option>Elisabeth Arden</option>
-          <option>Hewlett-Packard</option>
-          <option>HTC</option>
-          <option>Hugo Boss</option>
-          <option>Nike</option>
-          <option>Nikon</option>
-          <option>Palm</option>
-          <option>Panasonic</option>
-          <option>Reebok</option>
-          <option>Samsung</option>
-          <option>Sony</option>
-          <option>Swarovski</option>
-        </select>
-      </div>
-      
-      <div id="bestseller_side" class="s_box clearfix">
-        <h2>Bestsellers</h2>
-        <div class="s_item s_size_1 clearfix">
-          <a class="s_thumb" href="product.php"><img src="images/dummy/pic_10.jpg" width="38" height="38" alt="iPhone 3GS 8GB" /></a>
-          <h3><a href="product.php">iPhone 3GS 8GB</a></h3>
-          <p><a href="product.php"><span class="s_main_color"><span class="s_currency s_before">£</span>587.50</span></a></p>
-        </div>
-        
-        <div class="s_item s_size_1 clearfix">
-          <a class="s_thumb" href="product.php"><img src="images/dummy/pic_9.jpg" width="38" height="38" alt="Hubo Boss Emotion" /></a>
-          <h3><a href="product.php">Hubo Boss Emotion</a></h3>
-          <p><a href="product.php"><span class="s_main_color"><span class="s_currency s_before">£</span>2,350.00</span></a></p>
-        </div>
-        
-        <div class="s_item s_size_1 clearfix">
-          <a class="s_thumb" href="product.php"><img src="images/dummy/pic_8.jpg" width="38" height="38" alt="Panasonic Lumix" /></a>
-          <h3><a href="product.php">Panasonic Lumix</a></h3>
-          <p><a href="product.php"><span class="s_main_color"><span class="s_currency s_before">£</span>94.00</span></a></p>
-        </div>
-        
-        <div class="s_item s_size_1 clearfix">
-          <a class="s_thumb" href="product.php"><img src="images/dummy/pic_7.jpg" width="38" height="38" alt="Casio Exilim Zoom" /></a>
-          <h3><a href="product.php">Casio Exilim Zoom</a></h3>
-          <p><a href="product.php"><span class="s_main_color"><span class="s_currency s_before">£</span>117.50</span></a></p>
-        </div>
-  
-        <div class="s_item s_size_1 clearfix">
-          <a class="s_thumb" href="product.php"><img src="images/dummy/pic_6.jpg" width="38" height="38" alt="Christian Dior Amber Woman" /></a>
-          <h3><a href="product.php">Christian Dior Amber Woman</a></h3>
-          <p><a href="product.php"><span class="s_main_color"><span class="s_currency s_before">£</span>328.99</span></a></p>
-        </div>
-  
-        <div class="s_item s_size_1 clearfix">
-          <a class="s_thumb" href="product.php"><img src="images/dummy/pic_5.jpg" width="38" height="38" alt="iPod Classic" /></a>
-          <h3><a href="product.php">iPod Classic</a></h3>
-          <p><a href="product.php"><span class="s_main_color"><span class="s_currency s_before">£</span>117.50</span></a></p>
-        </div>
-        
-        <div class="s_item s_size_1 clearfix">
-          <a class="s_thumb" href="product.php"><img src="images/dummy/pic_4.jpg" width="38" height="38" alt="Sony VAIO" /></a>
-          <h3><a href="product.php">Sony VAIO</a></h3>
-          <p><a href="product.php"><span class="s_old"><span class="s_currency s_before">£</span>1,175.00</span> <span class="s_secondary_color"><span class="s_currency s_before">£</span>1,057.50</span></a></p>
-          <div class="s_rating_holder clearfix"><p class="s_rating s_rating_small s_rating_5 left"><span style="width: 100%;" class="s_percent"></span></p><span class="left">&nbsp;5/5</span></div>
-        </div>
-  
-        <div class="s_item s_size_1 clearfix">
-          <a class="s_thumb" href="product.php"><img src="images/dummy/pic_3.jpg" width="38" height="38" alt="Canon Digital Ixus 200 IS" /></a>
-          <h3><a href="product.php">Canon Digital Ixus 200 IS</a></h3>
-          <p><a href="product.php"><span class="s_main_color"><span class="s_currency s_before">£</span>117.50</span></a></p>
-        </div>
-    
-        <div class="s_item s_size_1 clearfix">
-          <a class="s_thumb" href="product.php"><img src="images/dummy/pic_2.jpg" width="38" height="38" alt="Hugo Boss Chrome" /></a>
-          <h3><a href="product.php">Hugo Boss Chrome</a></h3>
-          <p><a href="product.php"><span class="s_main_color"><span class="s_currency s_before">£</span>94.00</span></a></p>
-        </div>
-    
-        
-      </div>
-    
-    
-  
-
-    </div>
-    
+    <? include_once("includes/lis_right_col.php");?>
   </div>
   <!-- end of content -->
   
@@ -418,7 +289,6 @@ include_once("includes/header.php");
   <!-- ********************** --> 
 
 
-  <!-- end of shop info --> 
   
   
   

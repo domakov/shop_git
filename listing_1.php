@@ -62,15 +62,7 @@ include_once("includes/header.php");
     
     <div id="category" class="grid_9">
 
-      <div class="s_subcategories s_grid_view s_listing clearfix">
-        <div class="s_subcategory"> <a href=""><img src="images/category_100x100.jpg" title="Digital Cameras" alt="Digital Cameras" style="margin-bottom: 3px;" /></a> <a href="">Digital Cameras</a> </div>
-        <div class="s_subcategory"> <a href=""><img src="images/category_100x100.jpg" title="Home Audio" alt="Home Audio" style="margin-bottom: 3px;" /></a> <a href="">Home Audio</a> </div>
-        <div class="s_subcategory"> <a href=""><img src="images/category_100x100.jpg" title="Home Cinema" alt="Home Cinema" style="margin-bottom: 3px;" /></a> <a href="">Home Cinema</a> </div>
-        <div class="s_subcategory"> <a href=""><img src="images/category_100x100.jpg" title="Cell Phones" alt="Cell Phones" style="margin-bottom: 3px;" /></a> <a href="">Cell Phones</a> </div>
-        <div class="s_subcategory"> <a href=""><img src="images/category_100x100.jpg" title="MP3 Players" alt="MP3 Players" style="margin-bottom: 3px;" /></a> <a href="">MP3 Players</a> </div>
-        <div class="s_subcategory"> <a href=""><img src="images/category_100x100.jpg" title="Car-Audio" alt="Car-Audio" style="margin-bottom: 3px;" /></a> <a href="">Car-Audio</a> </div>
-        <div class="clear"></div>
-      </div>
+      
       
       <div id="listing_options">
         <div id="listing_sort" class="s_switcher">
@@ -119,7 +111,7 @@ include_once("includes/header.php");
           <div class="grid_6 omega">
             <h3><a href="product.php?id=<?=$array["id_tovar"];?>"><?=$array["t_name"];?></a></h3>
             <p class="s_model"><?=$array['c_name'];?></p>
-            <p class="s_price s_promo_price"><span class="s_old_price"><span class="s_currency s_before">$</span><?=$array["t_sale"];?></span> <span class="s_currency s_before">$</span><?=$array["t_price"];?></p>
+            <p class="s_price s_promo_price"><span class="s_old_price"><span class="s_currency s_before">$</span></span> <span class="s_currency s_before">$</span><?=$array["t_price"];?></p>
             <p class="s_description"><?=$array["t_description"];?></p>
             <a class="s_button_add_to_cart" href="product.php?id=<?=$array["id_tovar"];?>"><span class="s_icon_16"><span class="s_icon"></span>Add to Cart</span></a>
           </div>
