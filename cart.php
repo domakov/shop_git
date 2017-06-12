@@ -28,7 +28,17 @@
  <?    
 include_once("includes/header.php");
 
-
+			$CheckBox=$_POST["CheckBox"]; 				 
+			$countBox=count($CheckBox);
+			if(!empty($CheckBox))
+			{	 
+				foreach($CheckBox as $Ch)
+				{
+				$sql="DELETE FROM basket WHERE  id_tov=$Ch  AND  id_user=$idus";
+				$a=fetchOne($sql);
+				};
+			}
+					   
 $sql="SELECT * from basket 
 INNER JOIN tovar ON basket.id_tov=tovar.id_tovar
 INNER JOIN foto ON tovar.id_tovar=foto.id_tovar 
@@ -53,18 +63,20 @@ $res=fetchAll($sql);
     </div>
   </div>
   <!-- end of intro -->
-
+<?$sql="";
+		
+  ?>
   <!-- ********************** --> 
   <!--      C O N T E N T     --> 
   <!-- ********************** --> 
   <div id="content" class="container_12">
-  
+ 
     <div id="shopping_cart" class="grid_12">
-
-      <form id="cart" class="clearfix" action="checkout.html">
+		<?if($res>0){?>
+      <form  method="POST" id="cart" class="clearfix" action="cart.php">
         <table class="s_table_1" width="100%" cellpadding="0" cellspacing="0" border="0">
           <tr>
-            <th width="65">Кетіру</th>
+            <th width="65">Тандау</th>
             <th width="60">Бейне</th>
             <th width="320">Атауы</th>
             <th>Модель</th>
@@ -72,12 +84,11 @@ $res=fetchAll($sql);
             <th>Тауар өлшемінің бағасы</th>
             <th>Жалпылама</th>
           </tr>
-		<?
-	  
-		foreach($res as $array){?>
-		
+
+			<?
+			foreach($res as $array){?>
 			  <tr class="even">
-				<td valign="middle"><input type="checkbox" /></td>
+				<td valign="middle"><input type="checkbox" name='CheckBox[]' value='<?=$array["id_tovar"];?>' /></td>
 				<td valign="middle"><a href="product.php"><img src="<?=$array["f_link"];?>" width="60" height="60" alt="Panasonic Lumix" /></a></td>
 				<td valign="middle"><a href="product.php"><strong><?=$array["t_name"];?></strong></a></td>
 				<td valign="middle"><?=$array["c_name"];?></td>
@@ -85,21 +96,21 @@ $res=fetchAll($sql);
 				<td valign="middle"><?=$array["pay"];?><span class="s_currency s_after"> KZT</span></td>
 				<td valign="middle"><?=($array["pay"]*$array["b_count"]);?><span class="s_currency s_after"> KZT</span></td>
 			  </tr>
-		  <?}?>
+		  <?}; ?>
+		 
         </table>
         <br />
-        <p class="s_total"><strong>Аралық:</strong> 880.00<span class="s_currency s_after"> KZT</span></p>
-        <p class="s_total"><strong>Қосылған құн салығы 17.5%:</strong> 154.00<span class="s_currency s_after"> KZT</span></p>
-        <p class="s_total s_secondary_color last"><strong>Жалпы:</strong><span class="s_currency s_after"> KZT</span></p>
+      <!--  <p class="s_total"><strong>Аралық:</strong> 880.00<span class="s_currency s_after"> KZT</span></p>
+        <p class="s_total"><strong>Қосылған құн салығы 17.5%:</strong> 154.00<span class="s_currency s_after"> KZT</span></p> --> 
+        <p class="s_total s_secondary_color last"><strong>Жалпы</strong><span class="s_currency s_after"> KZT</span></p>
                         
         <div class="clear"></div>
         <br />
-
-        <a class="s_button_1 s_ddd_bgr left"><span class="s_text">Сатып алуды жалғастыру</span></a>
-        <button class="s_button_1 s_main_color_bgr" type="submit"><span class="s_text">Шығу</span></button>
-        <a class="s_button_1 s_main_color_bgr" style="float:left;"><span class="s_text">Жою</span></a>
+        <!--<a class="s_button_1 s_ddd_bgr left"><span class="s_text">Сатып алуды жалғастыру</span></a> -->
+        <button class="s_button_1 s_main_color_bgr" type="submit"><span class="s_text">Сатып алу</span></button>
+        <button type="submit" class="s_button_1 s_main_color_bgr" style="margin-right:20px;"><span class="s_text">Жою</span></button>
       </form>
-
+<?}else echo "<h1 style='color:red;font-size:28px;'>Сізде тауар жоқ!</h1>"?>
     </div>
 
     <div class="clear"></div>
