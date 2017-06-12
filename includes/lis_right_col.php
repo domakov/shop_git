@@ -48,6 +48,6 @@
 			<h3><a href="product.php"><?=$array["t_name"];?></a></h3>
 			<p><a href="product.php"><span class="s_main_color"><span class="s_currency s_before">KZT</span> <?=$array["pay"];?></span></a></p>
 			</div> 
-		<?}}?>
+		<?}};?>
       </div>
     </div>
