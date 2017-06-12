@@ -16,7 +16,6 @@ if(!$_SESSION["order"])
 	{
 		$sql="INSERT INTO `order` (id_user, id_status, id_delivery) 
 						 VALUES($id_user,2,1)";
-		
 		$q=fetchOne($sql);
 		$sql="select LAST_INSERT_ID() as last_id";
 		$q=fetchArray($sql);
@@ -38,9 +37,5 @@ if(!$_SESSION["order"])
 	$q=fetchOne($sql);
   
 
-$sql="select t_name from tovar";
-$q=fetchArray($sql);
-$name=$q["t_name"];
-echo $name;
   ?>
 

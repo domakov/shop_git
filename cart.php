@@ -27,16 +27,22 @@
   <!-- ********************** -->
  <?    
 include_once("includes/header.php");
-
-			$CheckBox=$_POST["CheckBox"]; 				 
-			$countBox=count($CheckBox);
-			if(!empty($CheckBox))
-			{	 
-				foreach($CheckBox as $Ch)
+			if(isset($_POST["Oshiry"]))
 				{
-				$sql="DELETE FROM basket WHERE  id_tov=$Ch  AND  id_user=$idus";
-				$a=fetchOne($sql);
-				};
+					$CheckBox=$_POST["CheckBox"]; 				 
+					$countBox=count($CheckBox);
+					if(!empty($CheckBox))
+					{	 
+						foreach($CheckBox as $Ch)
+						{
+						$sql="DELETE FROM basket WHERE  id_tov=$Ch  AND  id_user=$idus";
+						$a=fetchOne($sql);
+						};
+					}
+				}
+			if (isset($_POST['Kypit'])){
+			$sql="UPDATE `db_shop`.`order` SET `id_status`=1 WHERE  id_user=$idus and id_ordr=".$_SESSION["order"];
+			$k=fetchOne($sql);
 			}
 					   
 $sql="SELECT * from basket 
@@ -86,7 +92,10 @@ $res=fetchAll($sql);
           </tr>
 
 			<?
-			foreach($res as $array){?>
+			$i=0;
+			foreach($res as $array){
+			$i=$array["pay"]*$array["b_count"]+$i;
+			?>
 			  <tr class="even">
 				<td valign="middle"><input type="checkbox" name='CheckBox[]' value='<?=$array["id_tovar"];?>' /></td>
 				<td valign="middle"><a href="product.php"><img src="<?=$array["f_link"];?>" width="60" height="60" alt="Panasonic Lumix" /></a></td>
@@ -102,13 +111,13 @@ $res=fetchAll($sql);
         <br />
       <!--  <p class="s_total"><strong>Аралық:</strong> 880.00<span class="s_currency s_after"> KZT</span></p>
         <p class="s_total"><strong>Қосылған құн салығы 17.5%:</strong> 154.00<span class="s_currency s_after"> KZT</span></p> --> 
-        <p class="s_total s_secondary_color last"><strong>Жалпы</strong><span class="s_currency s_after"> KZT</span></p>
+        <p class="s_total s_secondary_color last"> <strong>Жалпы</strong><span class="s_currency s_after"><?echo $i;?> KZT</span></p>
                         
         <div class="clear"></div>
         <br />
         <!--<a class="s_button_1 s_ddd_bgr left"><span class="s_text">Сатып алуды жалғастыру</span></a> -->
-        <button class="s_button_1 s_main_color_bgr" type="submit"><span class="s_text">Сатып алу</span></button>
-        <button type="submit" class="s_button_1 s_main_color_bgr" style="margin-right:20px;"><span class="s_text">Жою</span></button>
+        <button name="Kypit" class="s_button_1 s_main_color_bgr" type="submit"><span class="s_text">Сатып алу</span></button>
+        <button name="Oshiry" type="submit" class="s_button_1 s_main_color_bgr" style="margin-right:20px;"><span class="s_text">Жою</span></button>
       </form>
 <?}else echo "<h1 style='color:red;font-size:28px;'>Сізде тауар жоқ!</h1>"?>
     </div>

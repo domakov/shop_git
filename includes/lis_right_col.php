@@ -2,7 +2,8 @@
 	 <?$sql="SELECT * from basket 
 		INNER JOIN tovar ON basket.id_tov=tovar.id_tovar
 		INNER JOIN foto ON tovar.id_tovar=foto.id_tovar 
-		INNER JOIN category ON tovar.t_category = category.id_category where id_user=$idus";
+		INNER JOIN category ON tovar.t_category = category.id_category 
+		Inner join `order` ON  basket.id_ordr=`order`.id_ordr where id_status=1";
 		$popular=fetchAll($sql);
 		$sql="SELECT * from basket
 		INNER JOIN tovar ON basket.id_tov=tovar.id_tovar ";
@@ -38,14 +39,15 @@
 			  </ul>
 			</div>
 	  </div>
+	 
       <div id="bestseller_side" class="s_box clearfix">
         <h2>Белгілілері</h2>
-		<?foreach ($popular as $array){?> 
+		<?if($popular>0){foreach ($popular as $array){?> 
 			<div class="s_item s_size_1 clearfix">
 			<a class="s_thumb" href="product.php"><img src="<?=$array["f_link"];?>" width="38" height="38" alt="iPhone 3GS 8GB" /></a>
 			<h3><a href="product.php"><?=$array["t_name"];?></a></h3>
 			<p><a href="product.php"><span class="s_main_color"><span class="s_currency s_before">KZT</span> <?=$array["pay"];?></span></a></p>
 			</div> 
-		<?}?>
+		<?}}?>
       </div>
     </div>
