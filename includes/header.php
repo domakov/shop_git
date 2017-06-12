@@ -23,6 +23,7 @@
 			   <?foreach($q as $array){?>
                  <li><b>Е-mail:  </b><?echo $_SESSION["loginn"]?></li>
 				 <span class="clear border_eee"></span>
+				<input hidden value="<?$idus=($array["id_user"])?>"/> 
 				<input id="id_user" hidden name="id_user" value="<?=$array["id_user"]?>"/> 
 				 <li><b>Аты: </b> <?=$array["name"]?> </li>
 				 <span class="clear border_eee"></span>

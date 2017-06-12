@@ -46,35 +46,10 @@ $q=fetchArray($sql);
 	  
 	  
 	  
-	  
-    	<div id="brands_module" class="s_box">
-        <h2>Brands</h2>
-        <select onchange="location = this.value">
-          <option> --- Please Select --- </option>
-          <option>Adidas</option>
-          <option>Apple</option>
-          <option>Armani</option>
-          <option>Balenciaga</option>
-          <option>Bvlgari</option>
-          <option>Canon</option>
-          <option>Christian Dior</option>
-          <option>Elisabeth Arden</option>
-          <option>Hewlett-Packard</option>
-          <option>HTC</option>
-          <option>Hugo Boss</option>
-          <option>Nike</option>
-          <option>Nikon</option>
-          <option>Palm</option>
-          <option>Panasonic</option>
-          <option>Reebok</option>
-          <option>Samsung</option>
-          <option>Sony</option>
-          <option>Swarovski</option>
-        </select>
-      </div>
+
       
       <div id="bestseller_side" class="s_box clearfix">
-        <h2>Bestsellers</h2>
+        <h2>Популярные</h2>
         <div class="s_item s_size_1 clearfix">
           <a class="s_thumb" href="product.php"><img src="images/dummy/pic_10.jpg" width="38" height="38" alt="iPhone 3GS 8GB" /></a>
           <h3><a href="product.php">iPhone 3GS 8GB</a></h3>

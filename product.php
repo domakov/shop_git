@@ -141,19 +141,22 @@ include_once("includes/header.php");
       	<a id="product_image_preview" rel="prettyPhoto[gallery]" href="<?=$tovar["f_link"]?>"><img id="image" src="<?=$tovar["f_link"]?>" title="Leica M7" alt="Leica M7" /></a>
       </div>
      <div id="product_info" class="grid_6 omega">
-		<p class="s_price s_promo_price">
-		<?if($tovar["t_sale"]>0){?>
-			
-		<span  class="s_old_price">	
-		<span  class="s_currency s_before"><?echo $tovar["t_price"];?>$</span>
-		</span>
-		<?}?>
-		<?echo ($tovar["t_price"]-($tovar["t_price"]*$tovar["t_sale"]/100))?>
+
+		
+		 <p class="s_price s_promo_price" >
+		 <span  class="s_old_price">	
+		  <span  class="s_currency s_before"><?echo $tovar["t_price"];?>$</span>
+		 </span>
+		
+		<span class="s_old_price"><? if($tovar["t_sale"]>0){echo $tovar["t_price"];}?><span class="s_currency s_before">$</span></span>
+		<? echo ($tovar["t_price"]-($tovar["t_price"]*$tovar["t_sale"]/100));
+	
+		?>
 		<span class="s_currency s_before">$</span>
 		</p>
-		
-		
 	
+		
+		
 		
 		<input id="pay" hidden name="pay" value="<?echo ($tovar["t_price"]-($tovar["t_price"]*$tovar["t_sale"]/100))?>"/> 
 		<dl class="clearfix">

@@ -32,7 +32,7 @@ include_once("includes/header.php");
 $sql="SELECT * from basket 
 INNER JOIN tovar ON basket.id_tov=tovar.id_tovar
 INNER JOIN foto ON tovar.id_tovar=foto.id_tovar 
-INNER JOIN category ON tovar.t_category = category.id_category ";
+INNER JOIN category ON tovar.t_category = category.id_category where id_user=$idus";
 $res=fetchAll($sql);
 
 ?>
@@ -54,7 +54,6 @@ $res=fetchAll($sql);
   </div>
   <!-- end of intro -->
 
-  
   <!-- ********************** --> 
   <!--      C O N T E N T     --> 
   <!-- ********************** --> 
@@ -91,14 +90,14 @@ $res=fetchAll($sql);
         <br />
         <p class="s_total"><strong>Аралық:</strong> 880.00<span class="s_currency s_after"> KZT</span></p>
         <p class="s_total"><strong>Қосылған құн салығы 17.5%:</strong> 154.00<span class="s_currency s_after"> KZT</span></p>
-        <p class="s_total s_secondary_color last"><strong>Жалпы:</strong><?=($array[""]);?><span class="s_currency s_after"> KZT</span></p>
+        <p class="s_total s_secondary_color last"><strong>Жалпы:</strong><span class="s_currency s_after"> KZT</span></p>
                         
         <div class="clear"></div>
         <br />
 
         <a class="s_button_1 s_ddd_bgr left"><span class="s_text">Сатып алуды жалғастыру</span></a>
         <button class="s_button_1 s_main_color_bgr" type="submit"><span class="s_text">Шығу</span></button>
-        <a class="s_button_1 s_main_color_bgr"><span class="s_text">Жаңарту</span></a>
+        <a class="s_button_1 s_main_color_bgr" style="float:left;"><span class="s_text">Жою</span></a>
       </form>
 
     </div>
