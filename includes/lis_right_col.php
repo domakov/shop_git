@@ -24,10 +24,8 @@
 			</div>
         </div>
       </div>
-		<?
-			$sql="SELECT * from category";
-			$res=fetchAll($sql);
-		?>
+		<?	$sql="SELECT * from category";
+			$res=fetchAll($sql);?>
 	  <div id="categories_module" class="s_box">
 		   <h2>Санат</h2>
 		   <div class="s_list_1">

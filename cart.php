@@ -69,9 +69,6 @@ $res=fetchAll($sql);
     </div>
   </div>
   <!-- end of intro -->
-<?$sql="";
-		
-  ?>
   <!-- ********************** --> 
   <!--      C O N T E N T     --> 
   <!-- ********************** --> 
@@ -119,7 +116,7 @@ $res=fetchAll($sql);
         <button name="Kypit" class="s_button_1 s_main_color_bgr" type="submit"><span class="s_text">Сатып алу</span></button>
         <button name="Oshiry" type="submit" class="s_button_1 s_main_color_bgr" style="margin-right:20px;"><span class="s_text">Жою</span></button>
       </form>
-<?}else echo "<h1 style='color:red;font-size:28px;'>Сізде тауар жоқ!</h1>"?>
+<?}else echo "<h1 style='color:red;font-size:28px;'>Сізде себет жоқ!</h1>"?>
     </div>
 
     <div class="clear"></div>

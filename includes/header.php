@@ -115,7 +115,7 @@
         </ul>
       </div>
       <div id="cart_menu" class="s_nav">
-      	<a href="cart.php"><span class="s_icon"></span> <small class="s_text">Кәрзеңке</small><span class="s_grand_total s_main_color">$0.00</span></a>
+      	<a href="cart.php"><span class="s_icon"></span> <small class="s_text">Себет</small><span class="s_grand_total s_main_color">$0.00</span></a>
         <div class="s_submenu s_cart_holder">
 	
 		
