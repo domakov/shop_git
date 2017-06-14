@@ -43,17 +43,14 @@ include_once("includes/header.php");
 			if (isset($_POST['Kypit'])){
 			$sql="UPDATE `db_shop`.`order` SET `id_status`=1 WHERE  id_user=$idus and id_ordr=".$_SESSION["order"];
 			$k=fetchOne($sql);
-			}
-					   
+			}					   
 $sql="SELECT * from basket 
 INNER JOIN tovar ON basket.id_tov=tovar.id_tovar
 INNER JOIN foto ON tovar.id_tovar=foto.id_tovar 
 INNER JOIN category ON tovar.t_category = category.id_category where id_user=$idus";
 $res=fetchAll($sql);
-
 ?>
-  <!-- end of header --> 
-  
+  <!-- end of header -->  
 
   <!-- ********************** --> 
   <!--     I N T R O          -->

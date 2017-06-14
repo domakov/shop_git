@@ -1,9 +1,11 @@
 
-	 <?$sql="SELECT * from basket 
+	 <?$sql="SELECT id_tov,b_count,pay,tovar.id_tovar,t_name,t_price,t_category,id_foto,f_link,c_name,order.id_ordr,order.id_user,order.id_status from basket 
 		INNER JOIN tovar ON basket.id_tov=tovar.id_tovar
 		INNER JOIN foto ON tovar.id_tovar=foto.id_tovar 
 		INNER JOIN category ON tovar.t_category = category.id_category 
-		Inner join `order` ON  basket.id_ordr=`order`.id_ordr where id_status=1";
+		Inner join `order` ON  basket.id_ordr=`order`.id_ordr where id_status=1
+		group by id_tov
+		order by  b_count DESC LIMIT 5";
 		$popular=fetchAll($sql);
 		$sql="SELECT * from basket
 		INNER JOIN tovar ON basket.id_tov=tovar.id_tovar ";
@@ -16,7 +18,6 @@
         <h2 class="s_secondary_color">Shopping Cart</h2>
         <div id="cart_side_contents">
 			<div id="tes"  class="s_cart_item">
-
 			</div>
 			<span class="clear s_mb_15 border_eee"></span>
 			<span class="clear s_mb_15"></span>
