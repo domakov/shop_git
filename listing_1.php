@@ -29,7 +29,8 @@
 
 
 include_once("includes/header.php");
-
+$sql="SELECT * from category where id_category=".$_GET['id'];
+$cat=fetchAll($sql);
 
 ?>
   <!-- end of header --> 
@@ -43,11 +44,11 @@ include_once("includes/header.php");
     <div id="intro_wrap">
       <div class="container_12">
         <div id="breadcrumbs" class="grid_12">
-          <a href="">Home</a>
-          &gt;
-          <a href="">Clothing</a>
         </div>
-        <h1>Clothing</h1>
+         <?foreach($cat as $array) {?>
+        <h1><a href="listing_1.php?id=<?=$array["id_category"];?>"><?=$array["c_name"];?></a>
+		</h1>
+		<?}?>
       </div>
     </div>
   </div>

@@ -103,10 +103,7 @@ $(document).ready(function() {
   <!-- ********************** --> 
   <!-- end of header --> 
   
- <? include_once("includes/header.php");
-					
-				
-?>
+ <? include_once("includes/header.php");?>
   <!-- ********************** --> 
   <!--     I N T R O          -->
   <!-- ********************** --> 
@@ -115,11 +112,8 @@ $(document).ready(function() {
     <div id="intro_wrap">
       <div class="container_12">
         <div id="breadcrumbs" class="grid_12">
-          <a href="">Home</a>
-          &gt;
-          <a href="">Clothing</a>
         </div>
-        <h1>Clothing</h1>
+		 
       </div>
     </div>
 		

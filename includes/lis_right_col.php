@@ -43,9 +43,9 @@
         <h2>Белгілілері</h2>
 		<?if($popular>0){foreach ($popular as $array){?> 
 			<div class="s_item s_size_1 clearfix">
-			<a class="s_thumb" href="product.php"><img src="<?=$array["f_link"];?>" width="38" height="38" alt="iPhone 3GS 8GB" /></a>
-			<h3><a href="product.php"><?=$array["t_name"];?></a></h3>
-			<p><a href="product.php"><span class="s_main_color"><span class="s_currency s_before">KZT</span> <?=$array["pay"];?></span></a></p>
+			<a class="s_thumb" href="product.php?id=<?=$array["id_tovar"];?>"><img src="<?=$array["f_link"];?>" width="38" height="38" alt="iPhone 3GS 8GB" /></a>
+			<h3><a href="product.php?id=<?=$array["id_tovar"];?>"><?=$array["t_name"];?></a></h3>
+			<p><a href="product.php?id=<?=$array["id_tovar"];?>"><span class="s_main_color"><span class="s_currency s_before">KZT</span> <?=$array["pay"];?></span></a></p>
 			</div> 
 		<?}};?>
       </div>

@@ -4,7 +4,7 @@ session_start();
 <?
 
 if(isset($_POST["comment"])){ 
-$id=$_GET["id"];
+ $id=$_GET["id"];
 	$text=$_POST["text"];
 	$email=$_SESSION["loginn"];	
 	$sql_id='SELECT * FROM `user` WHERE email="'.$email.'"';

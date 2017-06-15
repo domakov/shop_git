@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en" xml:lang="en" xmlns:fb="http://www.facebook.com/2008/fbml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Your Store</title>
+<title>Себет</title>
 <meta name="description" content="My Store" />
 <link rel="stylesheet" type="text/css" href="stylesheet/960.css" media="all" />
 <link rel="stylesheet" type="text/css" href="stylesheet/screen.css" media="screen" />
@@ -41,14 +41,22 @@ include_once("includes/header.php");
 					}
 				}
 			if (isset($_POST['Kypit'])){
-			$sql="UPDATE `db_shop`.`order` SET `id_status`=1 WHERE  id_user=$idus and id_ordr=".$_SESSION["order"];
-			$k=fetchOne($sql);
-			}					   
+						
+						$sql="UPDATE `db_shop`.`order` SET `id_status`=1 WHERE  id_user=$idus and id_ordr=".$_SESSION["order"];
+						$k=fetchOne($sql);
+						unset($_SESSION["order"]);	
+						
+			
+					
+			}
+			
 $sql="SELECT * from basket 
 INNER JOIN tovar ON basket.id_tov=tovar.id_tovar
 INNER JOIN foto ON tovar.id_tovar=foto.id_tovar 
-INNER JOIN category ON tovar.t_category = category.id_category where id_user=$idus";
+INNER JOIN `order` on basket.id_ordr=`order`.id_ordr
+INNER JOIN category ON tovar.t_category = category.id_category where basket.id_user=$idus and `order`.id_status=2";
 $res=fetchAll($sql);
+
 ?>
   <!-- end of header -->  
 
@@ -59,9 +67,9 @@ $res=fetchAll($sql);
     <div id="intro_wrap">
       <div class="container_12">
         <div id="breadcrumbs" class="grid_12">
-          <a href="index.html">Басты бет</a>
-           &gt; <a href="cart.html">Кәрзеңке</a>
-        </div>
+         
+        </div><h1><a href="listing_1.php">Себет</a>
+		</h1>
       </div>
     </div>
   </div>
@@ -92,8 +100,8 @@ $res=fetchAll($sql);
 			?>
 			  <tr class="even">
 				<td valign="middle"><input type="checkbox" name='CheckBox[]' value='<?=$array["id_tovar"];?>' /></td>
-				<td valign="middle"><a href="product.php"><img src="<?=$array["f_link"];?>" width="60" height="60" alt="Panasonic Lumix" /></a></td>
-				<td valign="middle"><a href="product.php"><strong><?=$array["t_name"];?></strong></a></td>
+				<td valign="middle"><a href="product.php?id=<?=$array["id_tovar"];?>"><img src="<?=$array["f_link"];?>" width="60" height="60" alt="Panasonic Lumix" /></a></td>
+				<td valign="middle"><a href="product.php?id=<?=$array["id_tovar"];?>"><strong><?=$array["t_name"];?></strong></a></td>
 				<td valign="middle"><?=$array["c_name"];?></td>
 				<td valign="middle"><input type="text" size="3" value="<?=$array["b_count"];?>"/></td>
 				<td valign="middle"><?=$array["pay"];?><span class="s_currency s_after"> KZT</span></td>
@@ -113,7 +121,7 @@ $res=fetchAll($sql);
         <button name="Kypit" class="s_button_1 s_main_color_bgr" type="submit"><span class="s_text">Сатып алу</span></button>
         <button name="Oshiry" type="submit" class="s_button_1 s_main_color_bgr" style="margin-right:20px;"><span class="s_text">Жою</span></button>
       </form>
-<?}else echo "<h1 style='color:red;font-size:28px;'>Сізде себет жоқ!</h1>"?>
+<?}else echo "<h1 style='color:red;font-size:28px;'>Сізде тауар жоқ!</h1>"?>
     </div>
 
     <div class="clear"></div>

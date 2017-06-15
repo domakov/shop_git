@@ -37,6 +37,7 @@
 				 <span class="clear border_eee"></span>
 				 <?}?>
 				  <li><a href="index.php?q=quit">Шығу</a>  <a href="#" style="float:right">Өзгерту</a></li>
+				
 				</ul>
             </div>
           </li> 

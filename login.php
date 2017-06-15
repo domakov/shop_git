@@ -58,6 +58,7 @@ $(document).ready(function () {
 		{
 			$log = $_POST['log'];
 			$pass = $_POST['pass'];
+			// $pass = md5($_POST['pass']);
 			if($log==null and $pass==null)
 			{
 				$error= "Заполните поле!";
