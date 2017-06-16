@@ -146,7 +146,7 @@ LIMIT 6
           <p class="s_model"><a href="listing_1.php?id=<?=$array["id_category"];?>"><?=$array["c_name"];?></a></p>
           <p class="s_price s_promo_price"><span class="s_old_price"><span class="s_currency s_before">$</span><?=$array['t_price'];?></span><span class="s_currency s_before">$</span>
 		  <?echo ($array["t_price"]-($array["t_price"]*$array["t_sale"]/100))?></p>
-          <a class="s_button_add_to_cart" href="product.php"><span class="s_icon_16"><span class="s_icon"></span>Add to Cart</span></a>
+          <a class="s_button_add_to_cart" href="product.php?id=<?=$array["id_tovar"];?>"><span class="s_icon_16"><span class="s_icon"></span>Add to Cart</span></a>
         </div>
         <?}}?>
         <div class="clear"></div>
