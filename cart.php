@@ -68,7 +68,7 @@ $res=fetchAll($sql);
       <div class="container_12">
         <div id="breadcrumbs" class="grid_12">
          
-        </div><h1><a href="listing_1.php">Себет</a><a href="cart2.php" style="font-size:15px; float: right;padding-right: 20px;" >Сатып алынған тауарлар</a>
+        </div><h1><a	href="cart2.php">Сатып алынғандар</a>
 		</h1>
       </div>
     </div>

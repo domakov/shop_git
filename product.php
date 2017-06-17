@@ -214,7 +214,7 @@ $(document).ready(function() {
 			</div>
 			<form id="contact_form" action="" method="POST">
 		 <? if($_SESSION["loginn"]){?>
-				<div id="product_reviews" class="s_listing">
+		<div id="product_reviews" class="s_listing">
 					<h2 class="s_title_1"><span class="s_main_color">Пікір</span> қалдыру</h2>
 					<div id="review_title" class="clear"></div>
 					<div class="s_row_3 clearfix">
@@ -223,7 +223,7 @@ $(document).ready(function() {
 						 <textarea name="text" id="enquiry" style="width: 98%;" rows="8" class="required" title="1-3000 аралығында символ болуы тиіс!!!"></textarea>
 						</div>						
 					</div>
-					<div class="s_row_3 clearfix">							  
+				<div class="s_row_3 clearfix">							  
 					  <? if(count($tworaz)>0)
 					  {
 						echo "Сіз бағаладыңыз!";
