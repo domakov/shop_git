@@ -29,8 +29,7 @@
 
 
 include_once("includes/header.php");
-$sql="SELECT * from category where id_category=".$_GET['id'];
-$cat=fetchAll($sql);
+
 
 ?>
   <!-- end of header --> 
@@ -44,11 +43,11 @@ $cat=fetchAll($sql);
     <div id="intro_wrap">
       <div class="container_12">
         <div id="breadcrumbs" class="grid_12">
+          <a href="">Home</a>
+          &gt;
+          <a href="">Clothing</a>
         </div>
-         <?foreach($cat as $array) {?>
-        <h1><a href="listing_1.php?id=<?=$array["id_category"];?>"><?=$array["c_name"];?></a>
-		</h1>
-		<?}?>
+        <h1>Clothing</h1>
       </div>
     </div>
   </div>
@@ -62,21 +61,30 @@ $cat=fetchAll($sql);
 
     
     <div id="category" class="grid_9">
-
-      
-      
+	
       <div id="listing_options">
         <div id="listing_sort" class="s_switcher">
-          <span class="s_selected">Default</span>
+          <span class="s_selected">Сұрыптау</span>
           <ul class="s_options" style="display: none;">
-            <li><a href="">Name A - Z</a></li>
-            <li><a href="">Name Z - A</a></li>
-            <li><a href="">Price Low &gt; High</a></li>
-            <li><a href="">Price High &gt; Low</a></li>
-            <li><a href="">Rating Highest</a></li>
-            <li><a href="">Rating Lowest</a></li>
-            <li><a href="">Model A - Z</a></li>
-            <li><a href="">Model Z - A</a></li>
+				<?php
+					if(!$_GET["id"]) {
+						echo'
+							<li><a href="listing_1.php?filter=1">А - Я</a></li>
+							<li><a href="listing_1.php?filter=2">Я - А</a></li>
+							<li><a href="listing_1.php?filter=3">Арзаң бағасы бойынша</a></li>
+							<li><a href="listing_1.php?filter=4">Қымбат бағасы бойынша</a></li>
+						';
+					}
+					else {
+						
+						echo'
+							<li><a href="listing_1.php?filter=1&id='.$_GET['id'].'">А - Я</a></li>
+							<li><a href="listing_1.php?filter=2&id='.$_GET['id'].'">Я - А</a></li>
+							<li><a href="listing_1.php?filter=3&id='.$_GET['id'].'">Арзаң бағасы бойынша</a></li>
+							<li><a href="listing_1.php?filter=4&id='.$_GET['id'].'">Қымбат бағасы бойынша</a></li>
+						';
+					}
+				?>
           </ul>
         </div>
         <div id="view_mode" class="s_nav">
@@ -90,13 +98,56 @@ $cat=fetchAll($sql);
       <div class="clear"></div>
 		<?
 			if(!$_GET['id']){
-			$sqlt="SELECT * from tovar";
+				switch($_GET['filter']) {
+					case 1:
+						$sqlt="SELECT * from tovar ORDER BY t_name ASC";
+						break;
+					case 2:
+						$sqlt="SELECT * from tovar ORDER BY t_name DESC";
+						break;
+					case 3:
+						$sqlt="SELECT * from tovar ORDER BY t_price ASC";
+						break;
+					case 4:
+						$sqlt="SELECT * from tovar ORDER BY t_price DESC";
+						break;
+					default:
+						$sqlt="SELECT * from tovar";
+				}
 			}
 			else {
-			$sqlt ="SELECT * FROM tovar
-			INNER JOIN foto ON foto.id_tovar = tovar.id_tovar
-			INNER JOIN category ON tovar.t_category = category.id_category
-			WHERE t_category = ".$_GET['id'];
+				switch($_GET['filter']) {
+					case 1:
+						$sqlt ="SELECT * FROM tovar
+						INNER JOIN foto ON foto.id_tovar = tovar.id_tovar
+						INNER JOIN category ON tovar.t_category = category.id_category
+						WHERE t_category = ".$_GET['id']." ORDER BY t_name ASC";
+						break;
+					case 2:
+						$sqlt ="SELECT * FROM tovar
+						INNER JOIN foto ON foto.id_tovar = tovar.id_tovar
+						INNER JOIN category ON tovar.t_category = category.id_category
+						WHERE t_category = ".$_GET['id']." ORDER BY t_name DESC";
+						break;
+					case 3:
+						$sqlt ="SELECT * FROM tovar
+						INNER JOIN foto ON foto.id_tovar = tovar.id_tovar
+						INNER JOIN category ON tovar.t_category = category.id_category
+						WHERE t_category = ".$_GET['id']." ORDER BY t_price ASC";
+						break;
+					case 4:
+						$sqlt ="SELECT * FROM tovar
+						INNER JOIN foto ON foto.id_tovar = tovar.id_tovar
+						INNER JOIN category ON tovar.t_category = category.id_category
+						WHERE t_category = ".$_GET['id']." ORDER BY t_price DESC";
+						break;
+					default:
+						$sqlt ="SELECT * FROM tovar
+						INNER JOIN foto ON foto.id_tovar = tovar.id_tovar
+						INNER JOIN category ON tovar.t_category = category.id_category
+						WHERE t_category = ".$_GET['id'];
+				}
+				
 			}
 			
 			$tovar=fetchAll($sqlt);
@@ -121,7 +172,7 @@ $cat=fetchAll($sql);
 		<? echo ($array["t_price"]-($array["t_price"]*$array["t_sale"]/100));
 	
 		?>
-		<span class="s_currency s_before">$</span>
+		<span class="s_currency s_before"><?echo $_SESSION['currency']?></span>
 		</p>
 			<p class="s_description"><?=$array["t_description"];?></p>
             <a class="s_button_add_to_cart" href="product.php?id=<?=$array["id_tovar"];?>"><span class="s_icon_16"><span class="s_icon"></span>Add to Cart</span></a>
